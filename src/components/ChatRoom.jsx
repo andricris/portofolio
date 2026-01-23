@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { auth, loginWithGoogle, logout, db } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import {
@@ -14,6 +14,9 @@ export default function ChatRoom() {
   const [user, setUser] = useState(null);
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
+  const [isCleared, setIsCleared] = useState(false);
+  const unsubscribeRef = useRef(null);
+  const adminName = "Google Andri Chris";
 
   // Cek login
   useEffect(() => {
@@ -25,10 +28,18 @@ export default function ChatRoom() {
   useEffect(() => {
     const q = query(collection(db, "messages"), orderBy("createdAt"));
     const unsub = onSnapshot(q, (snapshot) => {
+      if (isCleared) return;
       setMessages(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
     });
+    unsubscribeRef.current = unsub;
     return () => unsub();
-  }, []);
+  }, [isCleared]);
+
+  const clearChat = () => {
+    setMessages([]);
+    setIsCleared(true);
+    unsubscribeRef.current?.();
+  };
 
   // Kirim pesan
   const sendMessage = async (e) => {
@@ -47,7 +58,8 @@ export default function ChatRoom() {
 
   return (
     <div className="bg-zinc-900 border border-gray-700 p-6 rounded-xl shadow-lg max-w-xl mx-auto mt-5">
-      <h2 className="text-2xl font-bold text-center mb-4 text-white">💬 Chat Room</h2>
+      <h2 className="text-2xl font-bold text-center mb-1 text-white">💬 Chat Room</h2>
+      <p className="text-center text-sm text-gray-400 mb-4">Admin: {adminName}</p>
 
       {/* Header user */}
       {user && (
@@ -67,7 +79,10 @@ export default function ChatRoom() {
 
       {/* Area pesan */}
       <div className="h-72 overflow-y-auto border border-gray-700 p-3 rounded-lg bg-zinc-800 mb-4 space-y-3">
-        {messages.map((msg) => (
+        {messages.length === 0 ? (
+          <p className="text-center text-sm text-gray-400">Belum ada pesan.</p>
+        ) : (
+          messages.map((msg) => (
           <div
             key={msg.id}
             className={`flex gap-2 ${msg.uid === user?.uid ? "justify-end" : "justify-start"}`}
@@ -97,7 +112,8 @@ export default function ChatRoom() {
               />
             )}
           </div>
-        ))}
+          ))
+        )}
       </div>
 
       {/* Form login / kirim pesan */}
@@ -115,6 +131,13 @@ export default function ChatRoom() {
             className="bg-green-600 px-4 py-2 rounded-lg text-white hover:bg-green-700 w-full sm:w-auto"
           >
             Send
+          </button>
+          <button
+            type="button"
+            onClick={clearChat}
+            className="bg-zinc-700 px-4 py-2 rounded-lg text-white hover:bg-zinc-600 w-full sm:w-auto"
+          >
+            Bersihkan
           </button>
         </form>
       ) : (
