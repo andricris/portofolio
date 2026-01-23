@@ -57,7 +57,8 @@ export default function ChatRoom() {
 
   return (
     <div className="bg-zinc-900 border border-gray-700 p-6 rounded-xl shadow-lg max-w-xl mx-auto mt-5">
-      <h2 className="text-2xl font-bold text-center mb-4 text-white">💬 Chat Room</h2>
+      <h2 className="text-2xl font-bold text-center mb-1 text-white">💬 Chat Room</h2>
+      <p className="text-center text-sm text-gray-400 mb-4">Admin: {adminName}</p>
 
       {/* Header user */}
       {user && (
