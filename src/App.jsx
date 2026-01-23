@@ -13,8 +13,6 @@ import Aurora from "./components/Aurora/Aurora";
 import AOS from 'aos';
 import ChatRoom from "./components/ChatRoom";
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
-AOS.init();
 
 function App() {
   const aboutRef = useRef(null);
@@ -32,13 +30,18 @@ function App() {
   // -------------------------
 
   useEffect(() => {
+    AOS.init();
+  }, []);
+
+  useEffect(() => {
     const isReload =
       performance.getEntriesByType("navigation")[0]?.type === "reload";
 
     if (isReload) {
-      // Ambil path tanpa hash
-      const baseUrl = window.location.origin + "/portofolio/";
-      window.location.replace(baseUrl);
+      const baseUrl = new URL(import.meta.env.BASE_URL, window.location.origin);
+      if (window.location.pathname !== baseUrl.pathname) {
+        window.location.replace(baseUrl.toString());
+      }
     }
   }, []);
 
@@ -79,7 +82,7 @@ function App() {
               <q>Avoid or just undertake it</q>
             </div>
             <h1 className="text-5xl font-bold mb-6">
-              <ShinyText text="Hi I'm Faris Edrik Prayoga" disabled={false} speed={3} className='custom-class' />
+              <ShinyText text="Hi I'm Andri Chris" disabled={false} speed={3} className='custom-class' />
             </h1>
             <BlurText
               text="A passionate application and web developer dedicated to crafting modern, high-performance digital experiences through innovative and user-friendly solutions."
@@ -91,7 +94,7 @@ function App() {
             <div className="flex items-center sm:gap-4 gap-2">
               <a 
                 href="./assets/CV.pdf" 
-                download="Faris_Edrik_Prayoga_CV.pdf" 
+                download="Andri_Chris_CV.pdf" 
                 className="font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
               >
                 <ShinyText text="Download CV" disabled={false} speed={3} className="custom-class" />
@@ -105,9 +108,9 @@ function App() {
           </div>
           <div className="md:ml-auto animate__animated animate__fadeInUp animate__delay-4s">
             <ProfileCard
-              name="Faris Edrik P"
+              name="Andri Chris"
               title="Web Developer"
-              handle="farisedrikp"
+              handle="andrichris"
               status="Online"
               contactText="Contact Me"
               avatarUrl="./assets/faris.png"
@@ -129,7 +132,7 @@ function App() {
                 </h2>
 
                 <BlurText
-                  text="I’m Faris Edrik Prayoga, a full-stack developer passionate about building modern, high-performance applications with an intuitive user experience. I enjoy working with the latest technologies like Artificial Intelligence, Machine Learning, and cloud-based development, blending creativity with precision to deliver impactful solutions. With over three years of experience and more than 20 completed projects, I’m committed to helping users and businesses grow in the digital era through functional, aesthetic, and scalable digital products."
+                  text="I’m Andri Chris, a full-stack developer passionate about building modern, high-performance applications with an intuitive user experience. I enjoy working with the latest technologies like Artificial Intelligence, Machine Learning, and cloud-based development, blending creativity with precision to deliver impactful solutions. With over three years of experience and more than 20 completed projects, I’m committed to helping users and businesses grow in the digital era through functional, aesthetic, and scalable digital products."
                   delay={150}
                   animateBy="words"
                   direction="top"
