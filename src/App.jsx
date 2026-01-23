@@ -13,8 +13,6 @@ import Aurora from "./components/Aurora/Aurora";
 import AOS from 'aos';
 import ChatRoom from "./components/ChatRoom";
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
-AOS.init();
 
 function App() {
   const aboutRef = useRef(null);
@@ -32,13 +30,18 @@ function App() {
   // -------------------------
 
   useEffect(() => {
+    AOS.init();
+  }, []);
+
+  useEffect(() => {
     const isReload =
       performance.getEntriesByType("navigation")[0]?.type === "reload";
 
     if (isReload) {
-      // Ambil path tanpa hash
-      const baseUrl = window.location.origin + "/portofolio/";
-      window.location.replace(baseUrl);
+      const baseUrl = new URL(import.meta.env.BASE_URL, window.location.origin);
+      if (window.location.pathname !== baseUrl.pathname) {
+        window.location.replace(baseUrl.toString());
+      }
     }
   }, []);
 
