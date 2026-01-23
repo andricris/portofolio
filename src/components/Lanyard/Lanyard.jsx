@@ -5,10 +5,12 @@ import { Canvas, extend, useFrame } from '@react-three/fiber';
 import { useGLTF, useTexture, Environment, Lightformer } from '@react-three/drei';
 import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphericalJoint } from '@react-three/rapier';
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
+import { hasWebGLSupport } from '../../utils/webgl';
 
 // replace with your own imports, see the usage snippet for details
-const cardGLB = "/portofolio/assets/card.glb";
-const lanyard = "/portofolio/assets/lanyard.png";
+const baseUrl = import.meta.env.BASE_URL || "/";
+const cardGLB = `${baseUrl}assets/card.glb`;
+const lanyard = `${baseUrl}assets/lanyard.png`;
 
 import * as THREE from 'three';
 import './Lanyard.css';
@@ -16,6 +18,20 @@ import './Lanyard.css';
 extend({ MeshLineGeometry, MeshLineMaterial });
 
 export default function Lanyard({ position = [0, 0, 30], gravity = [0, -40, 0], fov = 20, transparent = true }) {
+  const [webglSupported, setWebglSupported] = useState(true);
+
+  useEffect(() => {
+    setWebglSupported(hasWebGLSupport());
+  }, []);
+
+  if (!webglSupported) {
+    return (
+      <div className="lanyard-wrapper flex items-center justify-center">
+        <img src={lanyard} alt="Lanyard preview" className="max-w-full h-auto" />
+      </div>
+    );
+  }
+
   return (
     <div className="lanyard-wrapper">
       <Canvas
