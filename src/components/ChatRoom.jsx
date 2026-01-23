@@ -16,7 +16,6 @@ export default function ChatRoom() {
   const [messages, setMessages] = useState([]);
   const [isCleared, setIsCleared] = useState(false);
   const unsubscribeRef = useRef(null);
-  const adminName = "Google Andri Chris";
 
   // Cek login
   useEffect(() => {
