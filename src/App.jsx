@@ -15,6 +15,7 @@ import ChatRoom from "./components/ChatRoom";
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 function App() {
+  const baseUrl = import.meta.env.BASE_URL || "/";
   const aboutRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -78,7 +79,7 @@ function App() {
         <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
           <div className="animate__animated animate__fadeInUp animate__delay-3s">
             <div className="flex items-center gap-3 mb-6 bg bg-zinc-800 w-fit p-4 rounded-2xl">
-              <img src="./assets/faris1.png" className="w-10 rounded-md" />
+              <img src={`${baseUrl}assets/faris1.png`} className="w-10 rounded-md" />
               <q>Avoid or just undertake it</q>
             </div>
             <h1 className="text-5xl font-bold mb-6">
@@ -93,7 +94,7 @@ function App() {
             />
             <div className="flex items-center sm:gap-4 gap-2">
               <a 
-                href="./assets/CV.pdf" 
+
                 download="Andri_Chris_CV.pdf" 
                 className="font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
               >
@@ -113,7 +114,7 @@ function App() {
               handle="andrichris"
               status="Online"
               contactText="Contact Me"
-              avatarUrl="./assets/faris.png"
+              avatarUrl={`${baseUrl}assets/faris.png`}
               showUserInfo={true}
               enableTilt={true}
               enableMobileTilt={false}
