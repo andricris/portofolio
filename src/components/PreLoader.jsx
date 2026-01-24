@@ -25,6 +25,16 @@ const PreLoader = () => {
   }, [])
 
   useEffect(() => {
+    const fallbackCountTimer = setTimeout(() => setCountDone(true), 1500)
+    const fallbackHideTimer = setTimeout(() => setLoading(false), 6000)
+
+    return () => {
+      clearTimeout(fallbackCountTimer)
+      clearTimeout(fallbackHideTimer)
+    }
+  }, [])
+
+  useEffect(() => {
     if (countDone) {
       // Fade teks
       const fadeTextTimer = setTimeout(() => setFadeText(true), 3000)
