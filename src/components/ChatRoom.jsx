@@ -15,6 +15,8 @@ export default function ChatRoom({ adminName = "Admin" }) {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const [isCleared, setIsCleared] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [sendError, setSendError] = useState("");
   const unsubscribeRef = useRef(null);
 
   // Cek login
@@ -43,16 +45,30 @@ export default function ChatRoom({ adminName = "Admin" }) {
   // Kirim pesan
   const sendMessage = async (e) => {
     e.preventDefault();
-    if (!message.trim()) return;
+    const trimmedMessage = message.trim();
+    if (!trimmedMessage) return;
+    if (!user) {
+      setSendError("Login terlebih dahulu untuk mengirim pesan.");
+      return;
+    }
 
-    await addDoc(collection(db, "messages"), {
-      text: message,
-      uid: user.uid,
-      displayName: user.displayName,
-      photoURL: user.photoURL,
-      createdAt: serverTimestamp()
-    });
-    setMessage("");
+    setIsSending(true);
+    setSendError("");
+
+    try {
+      await addDoc(collection(db, "messages"), {
+        text: trimmedMessage,
+        uid: user.uid,
+        displayName: user.displayName,
+        photoURL: user.photoURL,
+        createdAt: serverTimestamp()
+      });
+      setMessage("");
+    } catch (error) {
+      setSendError(`Gagal mengirim pesan: ${error.message}`);
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -127,9 +143,10 @@ export default function ChatRoom({ adminName = "Admin" }) {
           />
           <button
             type="submit"
-            className="bg-green-600 px-4 py-2 rounded-lg text-white hover:bg-green-700 w-full sm:w-auto"
+            disabled={isSending}
+            className="bg-green-600 px-4 py-2 rounded-lg text-white hover:bg-green-700 disabled:cursor-not-allowed disabled:opacity-70 w-full sm:w-auto"
           >
-            Send
+            {isSending ? "Sending..." : "Send"}
           </button>
           <button
             type="button"
@@ -155,6 +172,7 @@ export default function ChatRoom({ adminName = "Admin" }) {
           <p className="text-sm text-gray-400">Login untuk mengirim pesan</p>
         </div>
       )}
+      {sendError ? <p className="mt-3 text-sm text-red-400">{sendError}</p> : null}
     </div>
   );
 }
