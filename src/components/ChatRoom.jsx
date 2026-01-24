@@ -4,6 +4,8 @@ import { onAuthStateChanged } from "firebase/auth";
 import {
   collection,
   addDoc,
+  deleteDoc,
+  doc,
   onSnapshot,
   query,
   orderBy,
@@ -11,13 +13,20 @@ import {
 } from "firebase/firestore";
 
 export default function ChatRoom({ adminName = "Admin" }) {
+  const adminUids = (import.meta.env.VITE_CHAT_ADMIN_UIDS || "")
+    .split(",")
+    .map((uid) => uid.trim())
+    .filter(Boolean);
   const [user, setUser] = useState(null);
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const [isCleared, setIsCleared] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [sendError, setSendError] = useState("");
+  const [actionError, setActionError] = useState("");
   const unsubscribeRef = useRef(null);
+  const isAdminUser = (uid) => adminUids.includes(uid);
+  const isAdmin = user ? isAdminUser(user.uid) : false;
 
   // Cek login
   useEffect(() => {
@@ -54,6 +63,7 @@ export default function ChatRoom({ adminName = "Admin" }) {
 
     setIsSending(true);
     setSendError("");
+    setActionError("");
 
     try {
       await addDoc(collection(db, "messages"), {
@@ -68,13 +78,33 @@ export default function ChatRoom({ adminName = "Admin" }) {
       const fallbackMessage = error?.message ? `Gagal mengirim pesan: ${error.message}` : "Gagal mengirim pesan.";
       if (error?.code === "permission-denied") {
         setSendError(
-          "Gagal mengirim pesan: izin Firestore belum mengizinkan write. Periksa rules agar pengguna login bisa menulis."
+          "Gagal mengirim pesan: izin Firestore belum mengizinkan write.\nPastikan login sudah aktif dan deploy rules Firestore ke project yang benar."
         );
       } else {
         setSendError(fallbackMessage);
       }
     } finally {
       setIsSending(false);
+    }
+  };
+
+  const handleDeleteMessage = async (messageId) => {
+    if (!isAdmin) {
+      setActionError("Hanya admin yang dapat menghapus pesan.");
+      return;
+    }
+    setActionError("");
+    try {
+      await deleteDoc(doc(db, "messages", messageId));
+    } catch (error) {
+      const fallbackMessage = error?.message
+        ? `Gagal menghapus pesan: ${error.message}`
+        : "Gagal menghapus pesan.";
+      if (error?.code === "permission-denied") {
+        setActionError("Gagal menghapus pesan: Firestore rules belum mengizinkan delete.");
+      } else {
+        setActionError(fallbackMessage);
+      }
     }
   };
 
@@ -88,7 +118,14 @@ export default function ChatRoom({ adminName = "Admin" }) {
         <div className="flex justify-between items-center mb-4 border-b border-gray-700 pb-3">
           <div className="flex items-center gap-3">
             <img src={user.photoURL} alt="avatar" className="w-10 h-10 rounded-full" />
-            <span className="text-white font-semibold">{user.displayName}</span>
+            <div className="flex items-center gap-2">
+              <span className="text-white font-semibold">{user.displayName}</span>
+              {isAdmin ? (
+                <span className="text-[10px] uppercase tracking-wide bg-yellow-500/20 text-yellow-300 px-2 py-0.5 rounded-full border border-yellow-500/40">
+                  Admin
+                </span>
+              ) : null}
+            </div>
           </div>
           <button
             onClick={logout}
@@ -123,7 +160,25 @@ export default function ChatRoom({ adminName = "Admin" }) {
                   : "bg-gray-700 text-white"
               }`}
             >
-              <div className="text-xs opacity-70 mb-1">{msg.displayName}</div>
+              <div className="flex items-center justify-between gap-3 text-xs opacity-80 mb-1">
+                <div className="flex items-center gap-2">
+                  <span>{msg.displayName}</span>
+                  {isAdminUser(msg.uid) ? (
+                    <span className="text-[10px] uppercase tracking-wide bg-yellow-500/20 text-yellow-300 px-2 py-0.5 rounded-full border border-yellow-500/40">
+                      Admin
+                    </span>
+                  ) : null}
+                </div>
+                {isAdmin ? (
+                  <button
+                    type="button"
+                    onClick={() => handleDeleteMessage(msg.id)}
+                    className="text-[10px] uppercase tracking-wide text-red-200 hover:text-red-100"
+                  >
+                    Delete
+                  </button>
+                ) : null}
+              </div>
               <div>{msg.text}</div>
             </div>
             {msg.uid === user?.uid && (
@@ -179,7 +234,8 @@ export default function ChatRoom({ adminName = "Admin" }) {
           <p className="text-sm text-gray-400">Login untuk mengirim pesan</p>
         </div>
       )}
-      {sendError ? <p className="mt-3 text-sm text-red-400">{sendError}</p> : null}
+      {sendError ? <p className="mt-3 text-sm text-red-400 whitespace-pre-line">{sendError}</p> : null}
+      {actionError ? <p className="mt-2 text-sm text-red-400 whitespace-pre-line">{actionError}</p> : null}
     </div>
   );
 }

@@ -64,6 +64,27 @@ firebase deploy --only firestore:rules
 
 > Jika muncul error **"Missing or insufficient permissions"**, berarti rules belum di-deploy atau masih menolak akses write.
 
+### Admin chat (hapus pesan & badge admin)
+
+Agar admin bisa menghapus pesan dan menampilkan badge **Admin**, lakukan 2 langkah berikut:
+
+1. Tambahkan UID admin di `firestore.rules` pada fungsi `isAdmin()`:
+```text
+function isAdmin() {
+  return request.auth != null
+    && request.auth.uid in [
+      "REPLACE_WITH_ADMIN_UID"
+    ];
+}
+```
+
+2. Isi UID admin di environment variable berikut (bisa lebih dari satu, pisahkan dengan koma):
+```bash
+VITE_CHAT_ADMIN_UIDS=UID_ADMIN_1,UID_ADMIN_2
+```
+
+> UID admin bisa dilihat dari Firebase Authentication (Users) atau dari data `uid` di koleksi `messages`.
+
 ## &#x20;Quick Preview
 
 Jika sudah di-deploy (contoh: GitHub Pages, Netlify, Vercel), kamu bisa tambahkan link deploy di sini, misalnya:
