@@ -19,6 +19,7 @@ export default function ChatRoom({ adminName = "Admin" }) {
     .split(",")
     .map((uid) => uid.trim())
     .filter(Boolean);
+  const hasAdminConfig = adminUids.length > 0;
   const [user, setUser] = useState(null);
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
@@ -29,6 +30,7 @@ export default function ChatRoom({ adminName = "Admin" }) {
   const unsubscribeRef = useRef(null);
   const isAdminUser = (uid) => adminUids.includes(uid);
   const isAdmin = user ? isAdminUser(user.uid) : false;
+  const canUseAdminActions = Boolean(user) && (isAdmin || !hasAdminConfig);
 
   // Cek login
   useEffect(() => {
@@ -48,7 +50,7 @@ export default function ChatRoom({ adminName = "Admin" }) {
   }, [isCleared]);
 
   const clearChat = async () => {
-    if (!isAdmin) {
+    if (hasAdminConfig && !isAdmin) {
       setActionError("Hanya admin yang dapat menghapus semua pesan.");
       return;
     }
@@ -117,7 +119,7 @@ export default function ChatRoom({ adminName = "Admin" }) {
   };
 
   const handleDeleteMessage = async (messageId) => {
-    if (!isAdmin) {
+    if (hasAdminConfig && !isAdmin) {
       setActionError("Hanya admin yang dapat menghapus pesan.");
       return;
     }
@@ -163,6 +165,19 @@ export default function ChatRoom({ adminName = "Admin" }) {
           </button>
         </div>
       )}
+      {user ? (
+        <div className="text-xs text-gray-400 mb-4 space-y-1">
+          <p>
+            UID: <span className="font-mono text-gray-200">{user.uid}</span>
+          </p>
+          {!hasAdminConfig ? (
+            <p className="text-yellow-300">
+              VITE_CHAT_ADMIN_UIDS belum diisi. Tombol admin akan mengikuti izin dari Firestore
+              rules (non-admin akan gagal).
+            </p>
+          ) : null}
+        </div>
+      ) : null}
 
       {/* Area pesan */}
       <div className="h-72 overflow-y-auto border border-gray-700 p-3 rounded-lg bg-zinc-800 mb-4 space-y-3">
@@ -197,7 +212,7 @@ export default function ChatRoom({ adminName = "Admin" }) {
                     </span>
                   ) : null}
                 </div>
-                {isAdmin ? (
+                {canUseAdminActions ? (
                   <button
                     type="button"
                     onClick={() => handleDeleteMessage(msg.id)}
