@@ -84,6 +84,7 @@ VITE_CHAT_ADMIN_UIDS=UID_ADMIN_1,UID_ADMIN_2
 ```
 
 > UID admin bisa dilihat dari Firebase Authentication (Users) atau dari data `uid` di koleksi `messages`.
+> Setelah mengubah environment variable, lakukan rebuild/redeploy agar nilai terbaru terbaca di aplikasi.
 
 ## &#x20;Quick Preview
 
