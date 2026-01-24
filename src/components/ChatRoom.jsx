@@ -65,7 +65,14 @@ export default function ChatRoom({ adminName = "Admin" }) {
       });
       setMessage("");
     } catch (error) {
-      setSendError(`Gagal mengirim pesan: ${error.message}`);
+      const fallbackMessage = error?.message ? `Gagal mengirim pesan: ${error.message}` : "Gagal mengirim pesan.";
+      if (error?.code === "permission-denied") {
+        setSendError(
+          "Gagal mengirim pesan: izin Firestore belum mengizinkan write. Periksa rules agar pengguna login bisa menulis."
+        );
+      } else {
+        setSendError(fallbackMessage);
+      }
     } finally {
       setIsSending(false);
     }

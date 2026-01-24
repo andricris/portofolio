@@ -17,6 +17,7 @@ Dibuat dengan React + Vite, ini adalah showcase dari project, skill, dan karya y
 - Dibangun dengan **React + Vite** — ringan, cepat reload, dan performa build optimal  
 - **ESLint** telah terkonfigurasi agar coding style tetap rapi  
 - Struktur modular dan siap dikembangkan—bisa ditambahkan halaman “About”, “Projects”, dsb.
+- Chat Room real-time menggunakan Firebase Auth (Google) + Firestore
 
 ##  Cara Jalankan
 
@@ -40,6 +41,28 @@ npm run dev
 ```bash
 npm run build
 ````
+
+## Konfigurasi Firebase Chat
+
+Chat Room membutuhkan rules Firestore agar user yang sudah login bisa mengirim pesan. File `firestore.rules` sudah disiapkan, tinggal deploy ke Firebase.
+
+1. Install Firebase CLI (sekali saja):
+```bash
+npm install -g firebase-tools
+```
+
+2. Login & pilih project:
+```bash
+firebase login
+firebase use --add
+```
+
+3. Deploy rules:
+```bash
+firebase deploy --only firestore:rules
+```
+
+> Jika muncul error **"Missing or insufficient permissions"**, berarti rules belum di-deploy atau masih menolak akses write.
 
 ## &#x20;Quick Preview
 
