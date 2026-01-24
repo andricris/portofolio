@@ -1,5 +1,6 @@
 import Aurora from "./Aurora/Aurora"
 import { useState, useEffect } from "react"
+import { hasWebGLSupport } from "../utils/webgl"
 import CountUp from "./CountUp/CountUp"
 
 const PreLoader = () => {
@@ -7,6 +8,21 @@ const PreLoader = () => {
   const [countDone, setCountDone] = useState(false)
   const [fadeText, setFadeText] = useState(false)
   const [fadeScreen, setFadeScreen] = useState(false)
+  const [webglSupported, setWebglSupported] = useState(true)
+
+  useEffect(() => {
+    setWebglSupported(hasWebGLSupport())
+  }, [])
+
+  useEffect(() => {
+    const fallbackCountTimer = setTimeout(() => setCountDone(true), 1500)
+    const fallbackHideTimer = setTimeout(() => setLoading(false), 6000)
+
+    return () => {
+      clearTimeout(fallbackCountTimer)
+      clearTimeout(fallbackHideTimer)
+    }
+  }, [])
 
   useEffect(() => {
     const fallbackCountTimer = setTimeout(() => setCountDone(true), 1500)
@@ -44,12 +60,16 @@ const PreLoader = () => {
           fadeScreen ? "opacity-0" : "opacity-100"
         }`}
       >
-        <Aurora
-          colorStops={["#577870", "#1F97A6", "#127B99"]}
-          blend={0.5}
-          amplitude={1.0}
-          speed={0.5}
-        />
+        {webglSupported ? (
+          <Aurora
+            colorStops={["#577870", "#1F97A6", "#127B99"]}
+            blend={0.5}
+            amplitude={1.0}
+            speed={0.5}
+          />
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-900 to-zinc-800" />
+        )}
         <div
           className={`absolute text-white text-6xl font-bold transition-all duration-1000 ${
             fadeText ? "opacity-0 -translate-y-10" : "opacity-100 translate-y-0"

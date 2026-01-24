@@ -12,12 +12,14 @@ import ProjectModal from "./components/ProjectModal/ProjectModal"; // <-- IMPORT
 import Aurora from "./components/Aurora/Aurora";
 import AOS from 'aos';
 import ChatRoom from "./components/ChatRoom";
+import { hasWebGLSupport } from "./utils/webgl";
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 function App() {
   const baseUrl = import.meta.env.BASE_URL || "/";
   const aboutRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [webglSupported, setWebglSupported] = useState(true);
 
   const [selectedProject, setSelectedProject] = useState(null); // null = modal tertutup
 
@@ -31,6 +33,12 @@ function App() {
   // -------------------------
 
   useEffect(() => {
+
+    setWebglSupported(hasWebGLSupport());
+  }, []);
+
+  useEffect(() => {
+
     AOS.init();
   }, []);
 
@@ -67,12 +75,16 @@ function App() {
   return (
     <>
       <div className="absolute top-0 left-0 w-full h-full -z-10 ">
-        <Aurora
-          colorStops={["#577870", "#1F97A6", "#127B99"]}
-          blend={0.5}
-          amplitude={1.0}
-          speed={0.5}
-        />
+        {webglSupported ? (
+          <Aurora
+            colorStops={["#577870", "#1F97A6", "#127B99"]}
+            blend={0.5}
+            amplitude={1.0}
+            speed={0.5}
+          />
+        ) : (
+          <div className="w-full h-full bg-gradient-to-b from-[#0a0a0a] via-[#111111] to-[#1a1a1a]" />
+        )}
       </div>
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -94,6 +106,7 @@ function App() {
             />
             <div className="flex items-center sm:gap-4 gap-2">
               <a 
+                href={`${baseUrl}assets/CV.pdf`} 
 
                 download="Andri_Chris_CV.pdf" 
                 className="font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] transition-colors"

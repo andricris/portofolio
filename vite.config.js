@@ -6,6 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 const baseUrl = process.env.VERCEL ? "/" : "/portofolio/";
 
 export default defineConfig({
-
+  base: "/",
   plugins: [react(), tailwindcss()],
 })
