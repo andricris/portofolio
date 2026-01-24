@@ -68,7 +68,7 @@ export default function ChatRoom({ adminName = "Admin" }) {
       const fallbackMessage = error?.message ? `Gagal mengirim pesan: ${error.message}` : "Gagal mengirim pesan.";
       if (error?.code === "permission-denied") {
         setSendError(
-          "Gagal mengirim pesan: izin Firestore belum mengizinkan write. Periksa rules agar pengguna login bisa menulis."
+          "Gagal mengirim pesan: izin Firestore belum mengizinkan write.\nPastikan login sudah aktif dan deploy rules Firestore ke project yang benar."
         );
       } else {
         setSendError(fallbackMessage);
@@ -179,7 +179,7 @@ export default function ChatRoom({ adminName = "Admin" }) {
           <p className="text-sm text-gray-400">Login untuk mengirim pesan</p>
         </div>
       )}
-      {sendError ? <p className="mt-3 text-sm text-red-400">{sendError}</p> : null}
+      {sendError ? <p className="mt-3 text-sm text-red-400 whitespace-pre-line">{sendError}</p> : null}
     </div>
   );
 }
