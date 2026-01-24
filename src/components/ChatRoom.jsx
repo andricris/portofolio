@@ -6,10 +6,12 @@ import {
   addDoc,
   deleteDoc,
   doc,
+  getDocs,
   onSnapshot,
   query,
   orderBy,
-  serverTimestamp
+  serverTimestamp,
+  writeBatch
 } from "firebase/firestore";
 
 export default function ChatRoom({ adminName = "Admin" }) {
@@ -45,10 +47,36 @@ export default function ChatRoom({ adminName = "Admin" }) {
     return () => unsub();
   }, [isCleared]);
 
-  const clearChat = () => {
-    setMessages([]);
-    setIsCleared(true);
-    unsubscribeRef.current?.();
+  const clearChat = async () => {
+    if (!isAdmin) {
+      setActionError("Hanya admin yang dapat menghapus semua pesan.");
+      return;
+    }
+    setActionError("");
+    try {
+      const snapshot = await getDocs(collection(db, "messages"));
+      if (snapshot.empty) {
+        setMessages([]);
+        setIsCleared(true);
+        unsubscribeRef.current?.();
+        return;
+      }
+      const batch = writeBatch(db);
+      snapshot.docs.forEach((docItem) => batch.delete(docItem.ref));
+      await batch.commit();
+      setMessages([]);
+      setIsCleared(true);
+      unsubscribeRef.current?.();
+    } catch (error) {
+      const fallbackMessage = error?.message
+        ? `Gagal menghapus semua pesan: ${error.message}`
+        : "Gagal menghapus semua pesan.";
+      if (error?.code === "permission-denied") {
+        setActionError("Gagal menghapus semua pesan: Firestore rules belum mengizinkan delete.");
+      } else {
+        setActionError(fallbackMessage);
+      }
+    }
   };
 
   // Kirim pesan
@@ -215,7 +243,7 @@ export default function ChatRoom({ adminName = "Admin" }) {
             onClick={clearChat}
             className="bg-zinc-700 px-4 py-2 rounded-lg text-white hover:bg-zinc-600 w-full sm:w-auto"
           >
-            Bersihkan
+            Hapus semua
           </button>
         </form>
       ) : (

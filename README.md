@@ -66,7 +66,7 @@ firebase deploy --only firestore:rules
 
 ### Admin chat (hapus pesan & badge admin)
 
-Agar admin bisa menghapus pesan dan menampilkan badge **Admin**, lakukan 2 langkah berikut:
+Agar admin bisa menghapus pesan (termasuk tombol **Hapus semua**) dan menampilkan badge **Admin**, lakukan 2 langkah berikut
 
 1. Tambahkan UID admin di `firestore.rules` pada fungsi `isAdmin()`:
 ```text
