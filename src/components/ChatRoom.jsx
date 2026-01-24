@@ -10,7 +10,7 @@ import {
   serverTimestamp
 } from "firebase/firestore";
 
-export default function ChatRoom() {
+export default function ChatRoom({ adminName = "Admin" }) {
   const [user, setUser] = useState(null);
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
