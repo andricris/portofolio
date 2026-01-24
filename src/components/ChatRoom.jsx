@@ -15,7 +15,7 @@ import {
 } from "firebase/firestore";
 
 export default function ChatRoom({ adminName = "Admin" }) {
-  const adminUids = (import.meta.env.VITE_CHAT_ADMIN_UIDS || "")
+  const adminUids = (import.meta.env.VITE_CHAT_ADMIN_UIDS || "M3qd0Wy3Pxa9oInXA6MaHy6b10r2")
     .split(",")
     .map((uid) => uid.trim())
     .filter(Boolean);
