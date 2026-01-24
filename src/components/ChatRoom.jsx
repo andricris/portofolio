@@ -14,7 +14,7 @@ import {
   writeBatch
 } from "firebase/firestore";
 
-export default function ChatRoom({ adminName = "Admin" }) {
+export default function ChatRoom() {
   const adminUids = (import.meta.env.VITE_CHAT_ADMIN_UIDS || "M3qd0Wy3Pxa9oInXA6MaHy6b10r2")
     .split(",")
     .map((uid) => uid.trim())
@@ -31,6 +31,11 @@ export default function ChatRoom({ adminName = "Admin" }) {
   const isAdminUser = (uid) => adminUids.includes(uid);
   const isAdmin = user ? isAdminUser(user.uid) : false;
   const canUseAdminActions = Boolean(user) && (isAdmin || !hasAdminConfig);
+  const getMaskedUid = (uid) => {
+    if (!uid) return "";
+    if (uid.length <= 8) return "••••••••";
+    return `${uid.slice(0, 4)}••••${uid.slice(-4)}`;
+  };
 
   // Cek login
   useEffect(() => {
@@ -141,8 +146,6 @@ export default function ChatRoom({ adminName = "Admin" }) {
   return (
     <div className="bg-zinc-900 border border-gray-700 p-6 rounded-xl shadow-lg max-w-xl mx-auto mt-5">
       <h2 className="text-2xl font-bold text-center mb-1 text-white">💬 Chat Room</h2>
-      <p className="text-center text-sm text-gray-400 mb-4">Admin: {adminName}</p>
-
       {/* Header user */}
       {user && (
         <div className="flex justify-between items-center mb-4 border-b border-gray-700 pb-3">
@@ -168,7 +171,7 @@ export default function ChatRoom({ adminName = "Admin" }) {
       {user ? (
         <div className="text-xs text-gray-400 mb-4 space-y-1">
           <p>
-            UID: <span className="font-mono text-gray-200">{user.uid}</span>
+            UID: <span className="font-mono text-gray-200">{getMaskedUid(user.uid)}</span>
           </p>
           {!hasAdminConfig ? (
             <p className="text-yellow-300">
