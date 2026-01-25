@@ -26,6 +26,7 @@ export default function ChatRoom() {
   const [isCleared, setIsCleared] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [sendError, setSendError] = useState("");
+  const [loginError, setLoginError] = useState("");
   const [actionError, setActionError] = useState("");
   const unsubscribeRef = useRef(null);
   const isAdminUser = (uid) => adminUids.includes(uid);
@@ -140,6 +141,33 @@ export default function ChatRoom() {
       } else {
         setActionError(fallbackMessage);
       }
+    }
+  };
+
+  const handleLogin = async () => {
+    setLoginError("");
+    try {
+      await loginWithGoogle();
+    } catch (error) {
+      const errorCode = error?.code || "";
+      if (errorCode === "auth/unauthorized-domain") {
+        setLoginError(
+          "Login gagal: domain belum diizinkan di Firebase Auth. Tambahkan domain situs ini di Firebase Console > Authentication > Settings > Authorized domains."
+        );
+        return;
+      }
+      if (errorCode === "auth/popup-blocked") {
+        setLoginError(
+          "Login gagal: popup diblokir browser. Izinkan popup untuk situs ini lalu coba lagi."
+        );
+        return;
+      }
+      if (errorCode === "auth/popup-closed-by-user") {
+        setLoginError("Login dibatalkan: popup ditutup sebelum selesai.");
+        return;
+      }
+      const fallbackMessage = error?.message ? `Login gagal: ${error.message}` : "Login gagal.";
+      setLoginError(fallbackMessage);
     }
   };
 
@@ -267,7 +295,7 @@ export default function ChatRoom() {
       ) : (
         <div className="flex flex-col items-center justify-center gap-4">
           <button
-            onClick={loginWithGoogle}
+            onClick={handleLogin}
             className="flex items-center gap-3 bg-white text-gray-800 px-5 py-2 rounded-full shadow hover:bg-gray-200 transition"
           >
             <img
@@ -278,6 +306,9 @@ export default function ChatRoom() {
             Login with Google
           </button>
           <p className="text-sm text-gray-400">Login untuk mengirim pesan</p>
+          {loginError ? (
+            <p className="text-sm text-red-400 text-center whitespace-pre-line">{loginError}</p>
+          ) : null}
         </div>
       )}
       {sendError ? <p className="mt-3 text-sm text-red-400 whitespace-pre-line">{sendError}</p> : null}
