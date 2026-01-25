@@ -163,17 +163,10 @@ export const listTools = [
   },
 ];
 
-import Proyek1 from "/assets/proyek/proyek1.jpg";
-import Proyek2 from "/assets/proyek/proyek2.jpg";
-import Proyek3 from "/assets/proyek/proyek3.jpg";
-import Proyek4 from "/assets/proyek/proyek4.jpg";
-import Proyek5 from "/assets/proyek/proyek5.jpg";
-import Proyek6 from "/assets/proyek/proyek6.jpg";
-
 export const listProyek = [
   {
     id: 1,
-    image: Proyek1,
+    image: "https://source.unsplash.com/1200x800/?warehouse,inventory",
     title: "Alokasi Overstok",
     subtitle: "Manajemen dan alokasi barang overstok secara efisien",
     fullDescription:
@@ -185,7 +178,7 @@ export const listProyek = [
   },
   {
     id: 2,
-    image: Proyek2,
+    image: "https://source.unsplash.com/1200x800/?tools,workshop",
     title: "SteamBox",
     subtitle: "Portal utilitas dan tools SteamBox",
     fullDescription: "Portal utilitas dan tools SteamBox",
@@ -196,7 +189,7 @@ export const listProyek = [
   },
   {
     id: 3,
-    image: Proyek3,
+    image: "https://source.unsplash.com/1200x800/?spreadsheet,template",
     title: "Template Alokasi Barang",
     subtitle: "Template alokasi & manajemen stok gudang",
     fullDescription: "Template alokasi & manajemen stok gudang",
@@ -207,7 +200,7 @@ export const listProyek = [
   },
   {
     id: 4,
-    image: Proyek4,
+    image: "https://source.unsplash.com/1200x800/?checklist,task",
     title: "Cek Pendingan",
     subtitle: "Mengecek status pendingan pemenuhan",
     fullDescription: "Mengecek status pendingan pemenuhan",
@@ -218,7 +211,7 @@ export const listProyek = [
   },
   {
     id: 5,
-    image: Proyek5,
+    image: "https://source.unsplash.com/1200x800/?email,newsletter",
     title: "Table to Email",
     subtitle: "Konversi tabel HTML ke format email",
     fullDescription: "Konversi tabel HTML ke format email",
@@ -229,7 +222,7 @@ export const listProyek = [
   },
   {
     id: 6,
-    image: Proyek6,
+    image: "https://source.unsplash.com/1200x800/?invoice,documents",
     title: "PO Direct",
     subtitle: "Splitter PO untuk manajemen pesanan",
     fullDescription: "Splitter PO untuk manajemen pesanan",
@@ -240,7 +233,7 @@ export const listProyek = [
   },
   {
     id: 7,
-    image: Proyek1,
+    image: "https://source.unsplash.com/1200x800/?automation,scanner",
     title: "PO Auto Reader",
     subtitle: "Baca & proses file PO otomatis",
     fullDescription: "Baca & proses file PO otomatis",
@@ -251,7 +244,7 @@ export const listProyek = [
   },
   {
     id: 8,
-    image: Proyek2,
+    image: "https://source.unsplash.com/1200x800/?excel,spreadsheet",
     title: "Split Excel",
     subtitle: "Memecah file Excel per kolom",
     fullDescription: "Memecah file Excel per kolom",
@@ -262,7 +255,7 @@ export const listProyek = [
   },
   {
     id: 9,
-    image: Proyek3,
+    image: "https://source.unsplash.com/1200x800/?cloud,upload,data",
     title: "Upload Data Excel",
     subtitle: "Kelola & lihat data Excel",
     fullDescription: "Kelola & lihat data Excel",
@@ -273,7 +266,7 @@ export const listProyek = [
   },
   {
     id: 10,
-    image: Proyek4,
+    image: "https://source.unsplash.com/1200x800/?running,track",
     title: "Fake Strava",
     subtitle: "Generator GPX lari simulasi",
     fullDescription: "Generator GPX lari simulasi",
@@ -284,7 +277,7 @@ export const listProyek = [
   },
   {
     id: 11,
-    image: Proyek5,
+    image: "https://source.unsplash.com/1200x800/?calculator,math",
     title: "Kalkulator ED Hibrida",
     subtitle: "Kalkulator hybrid ED",
     fullDescription: "Kalkulator hybrid ED",
@@ -295,7 +288,7 @@ export const listProyek = [
   },
   {
     id: 12,
-    image: Proyek6,
+    image: "https://source.unsplash.com/1200x800/?online,store,ecommerce",
     title: "H3 Store",
     subtitle: "Toko online solusi digital",
     fullDescription: "Toko online solusi digital",
@@ -306,7 +299,7 @@ export const listProyek = [
   },
   {
     id: 13,
-    image: Proyek1,
+    image: "https://source.unsplash.com/1200x800/?calendar,time",
     title: "Kalkulator Umur",
     subtitle: "Hitung umur, shio, weton",
     fullDescription: "Hitung umur, shio, weton",
@@ -317,7 +310,7 @@ export const listProyek = [
   },
   {
     id: 14,
-    image: Proyek2,
+    image: "https://source.unsplash.com/1200x800/?finance,calculator",
     title: "Kalkulator ED Single",
     subtitle: "Kalkulator nilai & EXP",
     fullDescription: "Kalkulator nilai & EXP",
@@ -328,7 +321,7 @@ export const listProyek = [
   },
   {
     id: 15,
-    image: Proyek3,
+    image: "https://source.unsplash.com/1200x800/?logistics,analytics",
     title: "Cons Dropping",
     subtitle: "Analisis & konsolidasi dropping",
     fullDescription: "Analisis & konsolidasi dropping",
@@ -339,7 +332,7 @@ export const listProyek = [
   },
   {
     id: 16,
-    image: Proyek4,
+    image: "https://source.unsplash.com/1200x800/?qr,payment",
     title: "Qris Pembayaran",
     subtitle: "Generator QRIS pembayaran",
     fullDescription: "Generator QRIS pembayaran",
@@ -350,7 +343,7 @@ export const listProyek = [
   },
   {
     id: 17,
-    image: Proyek5,
+    image: "https://source.unsplash.com/1200x800/?data,rows,columns",
     title: "Excel Line Converter",
     subtitle: "Baris Excel → satu baris",
     fullDescription: "Baris Excel → satu baris",
@@ -361,7 +354,7 @@ export const listProyek = [
   },
   {
     id: 18,
-    image: Proyek6,
+    image: "https://source.unsplash.com/1200x800/?data,migration",
     title: "Migrasi CSV",
     subtitle: "Migrasi & proses CSV",
     fullDescription: "Migrasi & proses CSV",
@@ -372,7 +365,7 @@ export const listProyek = [
   },
   {
     id: 19,
-    image: Proyek1,
+    image: "https://source.unsplash.com/1200x800/?table,data",
     title: "Data Tabular",
     subtitle: "Tabel data interaktif",
     fullDescription: "Tabel data interaktif",
@@ -383,7 +376,7 @@ export const listProyek = [
   },
   {
     id: 20,
-    image: Proyek2,
+    image: "https://source.unsplash.com/1200x800/?json,code",
     title: "Excel to JSON",
     subtitle: "Konversi Excel ke JSON",
     fullDescription: "Konversi Excel ke JSON",
@@ -394,7 +387,7 @@ export const listProyek = [
   },
   {
     id: 21,
-    image: Proyek3,
+    image: "https://source.unsplash.com/1200x800/?pivot,chart",
     title: "Excel Multi Column Pivot",
     subtitle: "Pivot multi-kolom dinamis",
     fullDescription: "Pivot multi-kolom dinamis",
@@ -405,7 +398,7 @@ export const listProyek = [
   },
   {
     id: 22,
-    image: Proyek4,
+    image: "https://source.unsplash.com/1200x800/?package,scale",
     title: "Kalkulator Kubikasi Berat",
     subtitle: "Hitung kubikasi berat logistik",
     fullDescription: "Hitung kubikasi berat logistik",
@@ -416,7 +409,7 @@ export const listProyek = [
   },
   {
     id: 23,
-    image: Proyek5,
+    image: "https://source.unsplash.com/1200x800/?ratio,graph",
     title: "Kalkulator Rasio",
     subtitle: "Hitung rasio proporsional",
     fullDescription: "Hitung rasio proporsional",
@@ -427,7 +420,7 @@ export const listProyek = [
   },
   {
     id: 24,
-    image: Proyek6,
+    image: "https://source.unsplash.com/1200x800/?delivery,truck",
     title: "Jadwal Kirim & PL",
     subtitle: "Jadwal kirim & pick-up list",
     fullDescription: "Jadwal kirim & pick-up list",
@@ -438,7 +431,7 @@ export const listProyek = [
   },
   {
     id: 25,
-    image: Proyek1,
+    image: "https://source.unsplash.com/1200x800/?ocr,document",
     title: "JPG to Txt",
     subtitle: "OCR JPG ke TXT via API",
     fullDescription: "OCR JPG ke TXT via API",
