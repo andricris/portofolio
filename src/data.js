@@ -166,7 +166,7 @@ export const listTools = [
 export const listProyek = [
   {
     id: 1,
-    image: "https://cdn-icons-png.flaticon.com/512/289/2897818.png",
+    image: "https://cdn-icons-png.flaticon.com/512/2897/2897818.png",
     title: "Alokasi Overstok",
     subtitle: "Manajemen dan alokasi barang overstok secara efisien",
     fullDescription:
@@ -189,7 +189,7 @@ export const listProyek = [
   },
   {
     id: 3,
-    image: "https://cdn-icons-png.flaticon.com/512/170/17081232.png",
+    image: "https://cdn-icons-png.flaticon.com/512/17081/17081232.png",
     title: "Template Alokasi Barang",
     subtitle: "Template alokasi & manajemen stok gudang",
     fullDescription: "Template alokasi & manajemen stok gudang",
@@ -200,7 +200,7 @@ export const listProyek = [
   },
   {
     id: 4,
-    image: "https://cdn-icons-png.flaticon.com/512/569/5695859.png",
+    image: "https://cdn-icons-png.flaticon.com/512/5695/5695859.png",
     title: "Cek Pendingan",
     subtitle: "Mengecek status pendingan pemenuhan",
     fullDescription: "Mengecek status pendingan pemenuhan",
@@ -211,7 +211,7 @@ export const listProyek = [
   },
   {
     id: 5,
-    image: "https://cdn-icons-png.flaticon.com/512/760/7604036.png",
+    image: "https://cdn-icons-png.flaticon.com/512/7604/7604036.png",
     title: "Table to Email",
     subtitle: "Konversi tabel HTML ke format email",
     fullDescription: "Konversi tabel HTML ke format email",
@@ -222,7 +222,7 @@ export const listProyek = [
   },
   {
     id: 6,
-    image: "https://cdn-icons-png.flaticon.com/512/789/7891893.png",
+    image: "https://cdn-icons-png.flaticon.com/512/7891/7891893.png",
     title: "PO Direct",
     subtitle: "Splitter PO untuk manajemen pesanan",
     fullDescription: "Splitter PO untuk manajemen pesanan",
@@ -233,7 +233,7 @@ export const listProyek = [
   },
   {
     id: 7,
-    image: "https://cdn-icons-png.flaticon.com/512/160/16064382.png",
+    image: "https://cdn-icons-png.flaticon.com/512/16064/16064382.png",
     title: "PO Auto Reader",
     subtitle: "Baca & proses file PO otomatis",
     fullDescription: "Baca & proses file PO otomatis",
@@ -244,7 +244,7 @@ export const listProyek = [
   },
   {
     id: 8,
-    image: "https://cdn-icons-png.flaticon.com/512/472/4726040.png",
+    image: "https://cdn-icons-png.flaticon.com/512/4726/4726040.png",
     title: "Split Excel",
     subtitle: "Memecah file Excel per kolom",
     fullDescription: "Memecah file Excel per kolom",
@@ -255,7 +255,7 @@ export const listProyek = [
   },
   {
     id: 9,
-    image: "https://cdn-icons-png.flaticon.com/512/139/13942076.png",
+    image: "https://cdn-icons-png.flaticon.com/512/13942/13942076.png",
     title: "Upload Data Excel",
     subtitle: "Kelola & lihat data Excel",
     fullDescription: "Kelola & lihat data Excel",
@@ -266,7 +266,7 @@ export const listProyek = [
   },
   {
     id: 10,
-    image: "https://cdn-icons-png.flaticon.com/512/200/2000047.png",
+    image: "https://cdn-icons-png.flaticon.com/512/2000/2000047.png",
     title: "Fake Strava",
     subtitle: "Generator GPX lari simulasi",
     fullDescription: "Generator GPX lari simulasi",
@@ -277,7 +277,7 @@ export const listProyek = [
   },
   {
     id: 11,
-    image: "https://cdn-icons-png.flaticon.com/512/156/15639195.png",
+    image: "https://cdn-icons-png.flaticon.com/512/15639/15639195.png",
     title: "Kalkulator ED Hibrida",
     subtitle: "Kalkulator hybrid ED",
     fullDescription: "Kalkulator hybrid ED",
@@ -288,7 +288,7 @@ export const listProyek = [
   },
   {
     id: 12,
-    image: "https://cdn-icons-png.flaticon.com/512/116/1162456.png",
+    image: "https://cdn-icons-png.flaticon.com/512/1162/1162456.png",
     title: "H3 Store",
     subtitle: "Toko online solusi digital",
     fullDescription: "Toko online solusi digital",
@@ -299,7 +299,7 @@ export const listProyek = [
   },
   {
     id: 13,
-    image: "https://cdn-icons-png.flaticon.com/512/156/15639195.png",
+    image: "https://cdn-icons-png.flaticon.com/512/15639/15639195.png",
     title: "Kalkulator Umur",
     subtitle: "Hitung umur, shio, weton",
     fullDescription: "Hitung umur, shio, weton",
@@ -310,7 +310,7 @@ export const listProyek = [
   },
   {
     id: 14,
-    image: "https://cdn-icons-png.flaticon.com/512/156/15639195.png",
+    image: "https://cdn-icons-png.flaticon.com/512/15639/15639195.png",
     title: "Kalkulator ED Single",
     subtitle: "Kalkulator nilai & EXP",
     fullDescription: "Kalkulator nilai & EXP",
@@ -332,7 +332,7 @@ export const listProyek = [
   },
   {
     id: 16,
-    image: "https://cdn-icons-png.flaticon.com/512/157/15790666.png",
+    image: "https://cdn-icons-png.flaticon.com/512/15790/15790666.png",
     title: "Qris Pembayaran",
     subtitle: "Generator QRIS pembayaran",
     fullDescription: "Generator QRIS pembayaran",
@@ -343,7 +343,7 @@ export const listProyek = [
   },
   {
     id: 17,
-    image: "https://cdn-icons-png.flaticon.com/512/109/10977670.png",
+    image: "https://cdn-icons-png.flaticon.com/512/10977/10977670.png",
     title: "Excel Line Converter",
     subtitle: "Baris Excel → satu baris",
     fullDescription: "Baris Excel → satu baris",
@@ -354,7 +354,7 @@ export const listProyek = [
   },
   {
     id: 18,
-    image: "https://cdn-icons-png.flaticon.com/512/949/9496460.png",
+    image: "https://cdn-icons-png.flaticon.com/512/9496/9496460.png",
     title: "Migrasi CSV",
     subtitle: "Migrasi & proses CSV",
     fullDescription: "Migrasi & proses CSV",
@@ -365,7 +365,7 @@ export const listProyek = [
   },
   {
     id: 19,
-    image: "https://cdn-icons-png.flaticon.com/512/129/12959492.png",
+    image: "https://cdn-icons-png.flaticon.com/512/12959/12959492.png",
     title: "Data Tabular",
     subtitle: "Tabel data interaktif",
     fullDescription: "Tabel data interaktif",
@@ -387,7 +387,7 @@ export const listProyek = [
   },
   {
     id: 21,
-    image: "https://cdn-icons-png.flaticon.com/512/130/13097271.png",
+    image: "https://cdn-icons-png.flaticon.com/512/13097/13097271.png",
     title: "Excel Multi Column Pivot",
     subtitle: "Pivot multi-kolom dinamis",
     fullDescription: "Pivot multi-kolom dinamis",
@@ -398,7 +398,7 @@ export const listProyek = [
   },
   {
     id: 22,
-    image: "https://cdn-icons-png.flaticon.com/512/138/1380617.png",
+    image: "https://cdn-icons-png.flaticon.com/512/1380/1380617.png",
     title: "Kalkulator Kubikasi Berat",
     subtitle: "Hitung kubikasi berat logistik",
     fullDescription: "Hitung kubikasi berat logistik",
@@ -409,7 +409,7 @@ export const listProyek = [
   },
   {
     id: 23,
-    image: "https://cdn-icons-png.flaticon.com/512/115/11506695.png",
+    image: "https://cdn-icons-png.flaticon.com/512/11506/11506695.png",
     title: "Kalkulator Rasio",
     subtitle: "Hitung rasio proporsional",
     fullDescription: "Hitung rasio proporsional",
@@ -420,7 +420,7 @@ export const listProyek = [
   },
   {
     id: 24,
-    image: "https://cdn-icons-png.flaticon.com/512/956/9561688.png",
+    image: "https://cdn-icons-png.flaticon.com/512/9561/9561688.png",
     title: "Jadwal Kirim & PL",
     subtitle: "Jadwal kirim & pick-up list",
     fullDescription: "Jadwal kirim & pick-up list",
@@ -431,7 +431,7 @@ export const listProyek = [
   },
   {
     id: 25,
-    image: "https://cdn-icons-png.flaticon.com/512/949/9496440.png",
+    image: "https://cdn-icons-png.flaticon.com/512/9496/9496440.png",
     title: "JPG to Txt",
     subtitle: "OCR JPG ke TXT via API",
     fullDescription: "OCR JPG ke TXT via API",
