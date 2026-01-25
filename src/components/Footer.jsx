@@ -14,22 +14,15 @@ const Footer = () => {
       {/* Flex container adaptif */}
       <div className="w-full flex flex-col md:flex-row items-center md:justify-between gap-6">
         
-        {/* Judul - paling atas di mobile */}
-        <h1 className="text-2xl font-bold order-1 md:order-none">
-          Portofolio
-        </h1>
-
         {/* Ikon Sosmed - di tengah di mobile */}
-        <div className="flex gap-3 order-2 md:order-none">
-
+        <div className="flex gap-3 order-1 md:order-none">
           <a href="https://github.com/andricris"><i className="ri-github-fill ri-2x"></i></a>
-
-          <a href="https://www.instagram.com/andrichris/"><i className="ri-instagram-fill ri-2x"></i></a>
-          <a href="https://www.youtube.com/@andrichris"><i className="ri-youtube-fill ri-2x"></i></a>
+          <a href="https://www.instagram.com/andricris/"><i className="ri-instagram-fill ri-2x"></i></a>
+          <a href="https://www.youtube.com/"><i className="ri-youtube-fill ri-2x"></i></a>
         </div>
 
         {/* Dock - paling bawah di mobile */}
-        <div className="order-3 md:order-none mt-15 md:mt-0  md:mb-0">
+        <div className="order-2 md:order-none mt-15 md:mt-0  md:mb-0">
           <Dock 
             items={items}
             panelHeight={30}
