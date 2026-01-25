@@ -166,7 +166,7 @@ export const listTools = [
 export const listProyek = [
   {
     id: 1,
-    image: "https://source.unsplash.com/1200x800/?warehouse,inventory",
+    image: "https://loremflickr.com/1200/800/warehouse,inventory?lock=1",
     title: "Alokasi Overstok",
     subtitle: "Manajemen dan alokasi barang overstok secara efisien",
     fullDescription:
@@ -178,7 +178,7 @@ export const listProyek = [
   },
   {
     id: 2,
-    image: "https://source.unsplash.com/1200x800/?tools,workshop",
+    image: "https://loremflickr.com/1200/800/tools,workshop?lock=2",
     title: "SteamBox",
     subtitle: "Portal utilitas dan tools SteamBox",
     fullDescription: "Portal utilitas dan tools SteamBox",
@@ -189,7 +189,7 @@ export const listProyek = [
   },
   {
     id: 3,
-    image: "https://source.unsplash.com/1200x800/?spreadsheet,template",
+    image: "https://loremflickr.com/1200/800/spreadsheet,template?lock=3",
     title: "Template Alokasi Barang",
     subtitle: "Template alokasi & manajemen stok gudang",
     fullDescription: "Template alokasi & manajemen stok gudang",
@@ -200,7 +200,7 @@ export const listProyek = [
   },
   {
     id: 4,
-    image: "https://source.unsplash.com/1200x800/?checklist,task",
+    image: "https://loremflickr.com/1200/800/checklist,task?lock=4",
     title: "Cek Pendingan",
     subtitle: "Mengecek status pendingan pemenuhan",
     fullDescription: "Mengecek status pendingan pemenuhan",
@@ -211,7 +211,7 @@ export const listProyek = [
   },
   {
     id: 5,
-    image: "https://source.unsplash.com/1200x800/?email,newsletter",
+    image: "https://loremflickr.com/1200/800/email,inbox?lock=5",
     title: "Table to Email",
     subtitle: "Konversi tabel HTML ke format email",
     fullDescription: "Konversi tabel HTML ke format email",
@@ -222,7 +222,7 @@ export const listProyek = [
   },
   {
     id: 6,
-    image: "https://source.unsplash.com/1200x800/?invoice,documents",
+    image: "https://loremflickr.com/1200/800/invoice,documents?lock=6",
     title: "PO Direct",
     subtitle: "Splitter PO untuk manajemen pesanan",
     fullDescription: "Splitter PO untuk manajemen pesanan",
@@ -233,7 +233,7 @@ export const listProyek = [
   },
   {
     id: 7,
-    image: "https://source.unsplash.com/1200x800/?automation,scanner",
+    image: "https://loremflickr.com/1200/800/automation,scanner?lock=7",
     title: "PO Auto Reader",
     subtitle: "Baca & proses file PO otomatis",
     fullDescription: "Baca & proses file PO otomatis",
@@ -244,7 +244,7 @@ export const listProyek = [
   },
   {
     id: 8,
-    image: "https://source.unsplash.com/1200x800/?excel,spreadsheet",
+    image: "https://loremflickr.com/1200/800/excel,spreadsheet?lock=8",
     title: "Split Excel",
     subtitle: "Memecah file Excel per kolom",
     fullDescription: "Memecah file Excel per kolom",
@@ -255,7 +255,7 @@ export const listProyek = [
   },
   {
     id: 9,
-    image: "https://source.unsplash.com/1200x800/?cloud,upload,data",
+    image: "https://loremflickr.com/1200/800/cloud,upload,data?lock=9",
     title: "Upload Data Excel",
     subtitle: "Kelola & lihat data Excel",
     fullDescription: "Kelola & lihat data Excel",
@@ -266,7 +266,7 @@ export const listProyek = [
   },
   {
     id: 10,
-    image: "https://source.unsplash.com/1200x800/?running,track",
+    image: "https://loremflickr.com/1200/800/running,track?lock=10",
     title: "Fake Strava",
     subtitle: "Generator GPX lari simulasi",
     fullDescription: "Generator GPX lari simulasi",
@@ -277,7 +277,7 @@ export const listProyek = [
   },
   {
     id: 11,
-    image: "https://source.unsplash.com/1200x800/?calculator,math",
+    image: "https://loremflickr.com/1200/800/calculator,math?lock=11",
     title: "Kalkulator ED Hibrida",
     subtitle: "Kalkulator hybrid ED",
     fullDescription: "Kalkulator hybrid ED",
@@ -288,7 +288,7 @@ export const listProyek = [
   },
   {
     id: 12,
-    image: "https://source.unsplash.com/1200x800/?online,store,ecommerce",
+    image: "https://loremflickr.com/1200/800/online,store,ecommerce?lock=12",
     title: "H3 Store",
     subtitle: "Toko online solusi digital",
     fullDescription: "Toko online solusi digital",
@@ -299,7 +299,7 @@ export const listProyek = [
   },
   {
     id: 13,
-    image: "https://source.unsplash.com/1200x800/?calendar,time",
+    image: "https://loremflickr.com/1200/800/calendar,time?lock=13",
     title: "Kalkulator Umur",
     subtitle: "Hitung umur, shio, weton",
     fullDescription: "Hitung umur, shio, weton",
@@ -310,7 +310,7 @@ export const listProyek = [
   },
   {
     id: 14,
-    image: "https://source.unsplash.com/1200x800/?finance,calculator",
+    image: "https://loremflickr.com/1200/800/finance,calculator?lock=14",
     title: "Kalkulator ED Single",
     subtitle: "Kalkulator nilai & EXP",
     fullDescription: "Kalkulator nilai & EXP",
@@ -321,7 +321,7 @@ export const listProyek = [
   },
   {
     id: 15,
-    image: "https://source.unsplash.com/1200x800/?logistics,analytics",
+    image: "https://loremflickr.com/1200/800/logistics,analytics?lock=15",
     title: "Cons Dropping",
     subtitle: "Analisis & konsolidasi dropping",
     fullDescription: "Analisis & konsolidasi dropping",
@@ -332,7 +332,7 @@ export const listProyek = [
   },
   {
     id: 16,
-    image: "https://source.unsplash.com/1200x800/?qr,payment",
+    image: "https://loremflickr.com/1200/800/qr,payment?lock=16",
     title: "Qris Pembayaran",
     subtitle: "Generator QRIS pembayaran",
     fullDescription: "Generator QRIS pembayaran",
@@ -343,7 +343,7 @@ export const listProyek = [
   },
   {
     id: 17,
-    image: "https://source.unsplash.com/1200x800/?data,rows,columns",
+    image: "https://loremflickr.com/1200/800/data,rows,columns?lock=17",
     title: "Excel Line Converter",
     subtitle: "Baris Excel → satu baris",
     fullDescription: "Baris Excel → satu baris",
@@ -354,7 +354,7 @@ export const listProyek = [
   },
   {
     id: 18,
-    image: "https://source.unsplash.com/1200x800/?data,migration",
+    image: "https://loremflickr.com/1200/800/data,migration?lock=18",
     title: "Migrasi CSV",
     subtitle: "Migrasi & proses CSV",
     fullDescription: "Migrasi & proses CSV",
@@ -365,7 +365,7 @@ export const listProyek = [
   },
   {
     id: 19,
-    image: "https://source.unsplash.com/1200x800/?table,data",
+    image: "https://loremflickr.com/1200/800/table,data?lock=19",
     title: "Data Tabular",
     subtitle: "Tabel data interaktif",
     fullDescription: "Tabel data interaktif",
@@ -376,7 +376,7 @@ export const listProyek = [
   },
   {
     id: 20,
-    image: "https://source.unsplash.com/1200x800/?json,code",
+    image: "https://loremflickr.com/1200/800/json,code?lock=20",
     title: "Excel to JSON",
     subtitle: "Konversi Excel ke JSON",
     fullDescription: "Konversi Excel ke JSON",
@@ -387,7 +387,7 @@ export const listProyek = [
   },
   {
     id: 21,
-    image: "https://source.unsplash.com/1200x800/?pivot,chart",
+    image: "https://loremflickr.com/1200/800/pivot,chart?lock=21",
     title: "Excel Multi Column Pivot",
     subtitle: "Pivot multi-kolom dinamis",
     fullDescription: "Pivot multi-kolom dinamis",
@@ -398,7 +398,7 @@ export const listProyek = [
   },
   {
     id: 22,
-    image: "https://source.unsplash.com/1200x800/?package,scale",
+    image: "https://loremflickr.com/1200/800/package,scale?lock=22",
     title: "Kalkulator Kubikasi Berat",
     subtitle: "Hitung kubikasi berat logistik",
     fullDescription: "Hitung kubikasi berat logistik",
@@ -409,7 +409,7 @@ export const listProyek = [
   },
   {
     id: 23,
-    image: "https://source.unsplash.com/1200x800/?ratio,graph",
+    image: "https://loremflickr.com/1200/800/ratio,graph?lock=23",
     title: "Kalkulator Rasio",
     subtitle: "Hitung rasio proporsional",
     fullDescription: "Hitung rasio proporsional",
@@ -420,7 +420,7 @@ export const listProyek = [
   },
   {
     id: 24,
-    image: "https://source.unsplash.com/1200x800/?delivery,truck",
+    image: "https://loremflickr.com/1200/800/delivery,truck?lock=24",
     title: "Jadwal Kirim & PL",
     subtitle: "Jadwal kirim & pick-up list",
     fullDescription: "Jadwal kirim & pick-up list",
@@ -431,7 +431,7 @@ export const listProyek = [
   },
   {
     id: 25,
-    image: "https://source.unsplash.com/1200x800/?ocr,document",
+    image: "https://loremflickr.com/1200/800/ocr,document?lock=25",
     title: "JPG to Txt",
     subtitle: "OCR JPG ke TXT via API",
     fullDescription: "OCR JPG ke TXT via API",
