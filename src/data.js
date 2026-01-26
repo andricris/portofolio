@@ -437,7 +437,7 @@ export const listProyek = [
     fullDescription: "OCR JPG ke TXT via API",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "https://ttdwnlodr.netlify.app/",
+    url: "https://jpgtotxt.netlify.app/",
     dad: "2500",
   },
 ];
