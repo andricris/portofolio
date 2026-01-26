@@ -426,7 +426,7 @@ export const listProyek = [
     fullDescription: "Jadwal kirim & pick-up list",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://jadwlkrimdanpl.netlify.app/",
+    url: "https://jadwalkirimpl.netlify.app/",
     dad: "2400",
   },
   {
