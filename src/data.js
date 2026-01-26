@@ -415,7 +415,7 @@ export const listProyek = [
     fullDescription: "Hitung rasio proporsional",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "https://kalrasio.netlify.app/",
+    url: "https://rasiokalc.netlify.app/",
     dad: "2300",
   },
   {
