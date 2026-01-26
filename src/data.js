@@ -206,7 +206,7 @@ export const listProyek = [
     fullDescription: "Mengecek status pendingan pemenuhan",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://dualemail.netlify.app/",
+    url: "https://sage-conkies-fd072b.netlify.app/",
     dad: "400",
   },
   {
