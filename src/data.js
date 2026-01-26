@@ -360,7 +360,7 @@ export const listProyek = [
     fullDescription: "Migrasi & proses CSV",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://dghthret343536.netlify.app/",
+    url: "https://welcomemigrasi.netlify.app/",
     dad: "1800",
   },
   {
