@@ -239,7 +239,7 @@ export const listProyek = [
     fullDescription: "Baca & proses file PO otomatis",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "https://po-auto-reader.netlify.app/",
+    url: "https://readerpo.netlify.app/",
     dad: "700",
   },
   {
