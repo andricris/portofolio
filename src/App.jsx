@@ -8,7 +8,6 @@ import Lanyard from "./components/Lanyard/Lanyard";
 import GlassIcons from "./components/GlassIcons/GlassIcons";
 import { listTools, listProyek } from "./data";
 import ChromaGrid from "./components/ChromaGrid/ChromaGrid";
-import ProjectModal from "./components/ProjectModal/ProjectModal"; // <-- IMPORT MODAL
 import Aurora from "./components/Aurora/Aurora";
 import AOS from 'aos';
 import ChatRoom from "./components/ChatRoom";
@@ -20,17 +19,6 @@ function App() {
   const aboutRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [webglSupported, setWebglSupported] = useState(true);
-
-  const [selectedProject, setSelectedProject] = useState(null); // null = modal tertutup
-
-  const handleProjectClick = (project) => {
-    setSelectedProject(project);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedProject(null);
-  };
-  // -------------------------
 
   useEffect(() => {
 
@@ -232,7 +220,6 @@ function App() {
           <div style={{ height: 'auto', position: 'relative' }} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true" >
             <ChromaGrid
               items={listProyek}
-              onItemClick={handleProjectClick} // Kirim fungsi untuk handle klik
               radius={500}
               damping={0.45}
               fadeOut={0.6}
@@ -276,11 +263,6 @@ function App() {
         {/* Kontak */}
       </main>
 
-      <ProjectModal
-        isOpen={!!selectedProject}
-        onClose={handleCloseModal}
-        project={selectedProject}
-      />
     </>
   )
 }
