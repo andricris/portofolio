@@ -349,7 +349,7 @@ export const listProyek = [
     fullDescription: "Baris Excel → satu baris",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "https://exline.netlify.app/",
+    url: "https://lineconvert.netlify.app/",
     dad: "1700",
   },
   {
