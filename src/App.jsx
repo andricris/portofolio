@@ -31,6 +31,15 @@ function App() {
   }, []);
 
   useEffect(() => {
+    const refreshIntervalMs = 5 * 60 * 1000;
+    const intervalId = window.setInterval(() => {
+      window.location.reload();
+    }, refreshIntervalMs);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
+
+  useEffect(() => {
     const isReload =
       performance.getEntriesByType("navigation")[0]?.type === "reload";
 
