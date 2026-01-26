@@ -404,7 +404,7 @@ export const listProyek = [
     fullDescription: "Hitung kubikasi berat logistik",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://kubikasi-berat.netlify.app/",
+    url: "https://beratkubik.netlify.app/",
     dad: "2200",
   },
   {
