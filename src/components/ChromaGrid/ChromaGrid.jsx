@@ -2,10 +2,8 @@ import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import "./ChromaGrid.css";
 
-// Terima `onItemClick` di props
 export const ChromaGrid = ({
   items,
-  onItemClick, // Fungsi handler dari App.jsx
   className = "",
   radius = 300,
   columns = 3,
@@ -90,13 +88,10 @@ export const ChromaGrid = ({
           key={i}
           className="chroma-card"
           onMouseMove={handleCardMove}
-          // Panggil `onItemClick` saat kartu diklik dan kirim datanya
-          onClick={() => onItemClick(c)}
           style={
             {
               "--card-border": c.borderColor || "transparent",
               "--card-gradient": c.gradient,
-              cursor: "pointer", // Selalu pointer karena akan membuka modal
             }
           }
         >
@@ -108,6 +103,16 @@ export const ChromaGrid = ({
             {c.handle && <span className="handle">{c.handle}</span>}
             <p className="role">{c.subtitle}</p>
             {c.location && <span className="location">{c.location}</span>}
+            {c.url && (
+              <a
+                className="chroma-button"
+                href={c.url}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Open
+              </a>
+            )}
           </footer>
         </article>
       ))}
