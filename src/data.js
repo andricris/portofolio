@@ -195,7 +195,7 @@ export const listProyek = [
     fullDescription: "Template alokasi & manajemen stok gudang",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "https://funny-twilight-48b5c4.netlify.app/",
+    url: "https://dualemail.netlify.app/",
     dad: "300",
   },
   {
