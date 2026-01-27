@@ -36,7 +36,8 @@ export const listCertificates = [
     title: "Sertifikat Penghargaan - Desain Grafis",
     issuer: "PT. Mencari Cinta Sejati",
     date: "28 Agustus 2000",
-    image: "/assets/certificates/sertifikat-penghargaan.svg",
+    image: "/assets/certificates/Biru dan Emas Modern Penghargaan Sertifikat (1).png",
+    fallbackImage: "/assets/certificates/sertifikat-penghargaan.svg",
     alt: "Sertifikat Penghargaan Andri Chris untuk pelatihan Desain Grafis.",
   },
   {
@@ -44,7 +45,8 @@ export const listCertificates = [
     title: "Sertifikat Magang",
     issuer: "PT. Mencari Cinta Sejati",
     date: "20 Januari - 20 Agustus 2000",
-    image: "/assets/certificates/sertifikat-magang.svg",
+    image: "/assets/certificates/Hijau dan Putih Modern Sertifikat Kelulusan Magang.png",
+    fallbackImage: "/assets/certificates/sertifikat-magang.svg",
     alt: "Sertifikat Magang Andri Chris dari PT Mencari Cinta Sejati.",
   },
 ];

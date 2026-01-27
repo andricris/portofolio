@@ -257,6 +257,11 @@ function App() {
                     alt={certificate.alt}
                     className="h-32 w-full object-cover transition duration-300 group-hover:scale-105 md:h-40"
                     loading="lazy"
+                    onError={(event) => {
+                      if (certificate.fallbackImage) {
+                        event.currentTarget.src = certificate.fallbackImage;
+                      }
+                    }}
                   />
                 </div>
                 <div className="mt-4 space-y-1 text-left">
@@ -288,6 +293,11 @@ function App() {
                 src={selectedCertificate.image}
                 alt={selectedCertificate.alt}
                 className="max-h-[80vh] w-full rounded-xl object-contain"
+                onError={(event) => {
+                  if (selectedCertificate.fallbackImage) {
+                    event.currentTarget.src = selectedCertificate.fallbackImage;
+                  }
+                }}
               />
               <div className="mt-4 text-left">
                 <h3 className="text-xl font-semibold text-white">
