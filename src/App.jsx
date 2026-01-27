@@ -11,6 +11,7 @@ import ChromaGrid from "./components/ChromaGrid/ChromaGrid";
 import Aurora from "./components/Aurora/Aurora";
 import AOS from 'aos';
 import ChatRoom from "./components/ChatRoom";
+import ContactForm from "./components/ContactForm";
 import { hasWebGLSupport } from "./utils/webgl";
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
@@ -267,6 +268,9 @@ function App() {
             </div>
 
             {/* Contact Form di kanan */}
+            <div className="flex-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true">
+              <ContactForm />
+            </div>
           </div>
         </div>
         {/* Kontak */}

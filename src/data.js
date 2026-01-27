@@ -26,6 +26,9 @@ import Tools17 from "/assets/tools/php.png";
 import Tools18 from "/assets/tools/vite.png";
 import Tools19 from "/assets/tools/mysql.png";
 
+const projectStack = ["React", "Vite", "Tailwind"];
+const projectScreenshot =
+  "https://placehold.co/600x400/0f172a/ffffff?text=Project+Preview";
 
 export const listTools = [
   {
@@ -174,6 +177,9 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://moonlit-gecko-1ab281.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "100",
   },
   {
@@ -185,6 +191,9 @@ export const listProyek = [
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://dracin-babyland.vercel.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "200",
   },
   {
@@ -196,6 +205,9 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://dualemail.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "300",
   },
   {
@@ -207,6 +219,9 @@ export const listProyek = [
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://sage-conkies-fd072b.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "400",
   },
   {
@@ -218,6 +233,9 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://tabletoemail.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "500",
   },
   {
@@ -229,6 +247,9 @@ export const listProyek = [
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://podirect.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "600",
   },
   {
@@ -240,6 +261,9 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://readerpo.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "700",
   },
   {
@@ -251,6 +275,9 @@ export const listProyek = [
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://tesxls.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "800",
   },
   {
@@ -262,6 +289,9 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://andricris.github.io/data-excel/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "900",
   },
   {
@@ -273,6 +303,9 @@ export const listProyek = [
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://fakeh3.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "1000",
   },
   {
@@ -284,6 +317,9 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://kalkuede.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "1100",
   },
   {
@@ -295,6 +331,9 @@ export const listProyek = [
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://newh3store.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "1200",
   },
   {
@@ -306,6 +345,9 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://kalmur.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "1300",
   },
   {
@@ -317,6 +359,9 @@ export const listProyek = [
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://kalexp.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "1400",
   },
   {
@@ -328,6 +373,9 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://consdroping.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "1500",
   },
   {
@@ -339,6 +387,9 @@ export const listProyek = [
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://qrish3.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "1600",
   },
   {
@@ -350,6 +401,9 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://lineconvert.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "1700",
   },
   {
@@ -361,6 +415,9 @@ export const listProyek = [
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://welcomemigrasi.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "1800",
   },
   {
@@ -372,6 +429,9 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://datatabular.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "1900",
   },
   {
@@ -383,6 +443,9 @@ export const listProyek = [
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://excelkejson.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "2000",
   },
   {
@@ -394,6 +457,9 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://excel-multi-column-pivot.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "2100",
   },
   {
@@ -405,6 +471,9 @@ export const listProyek = [
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://beratkubik.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "2200",
   },
   {
@@ -416,6 +485,9 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://rasiokalc.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "2300",
   },
   {
@@ -427,6 +499,9 @@ export const listProyek = [
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://jadwalkirimpl.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "2400",
   },
   {
@@ -438,6 +513,9 @@ export const listProyek = [
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://jpgtotxt.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
     dad: "2500",
   },
 ];
