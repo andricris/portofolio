@@ -30,6 +30,25 @@ const projectStack = ["React", "Vite", "Tailwind"];
 const projectScreenshot =
   "https://placehold.co/600x400/0f172a/ffffff?text=Project+Preview";
 
+export const listCertificates = [
+  {
+    id: 1,
+    title: "Sertifikat Penghargaan - Desain Grafis",
+    issuer: "PT. Mencari Cinta Sejati",
+    date: "28 Agustus 2000",
+    image: "/assets/certificates/sertifikat-penghargaan.svg",
+    alt: "Sertifikat Penghargaan Andri Chris untuk pelatihan Desain Grafis.",
+  },
+  {
+    id: 2,
+    title: "Sertifikat Magang",
+    issuer: "PT. Mencari Cinta Sejati",
+    date: "20 Januari - 20 Agustus 2000",
+    image: "/assets/certificates/sertifikat-magang.svg",
+    alt: "Sertifikat Magang Andri Chris dari PT Mencari Cinta Sejati.",
+  },
+];
+
 export const listTools = [
   {
     id: 1,

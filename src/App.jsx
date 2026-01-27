@@ -6,7 +6,7 @@ import ScrambledText from "./components/ScrambledText/ScrambledText";
 import SplitText from "./components/SplitText/SplitText";
 import Lanyard from "./components/Lanyard/Lanyard";
 import GlassIcons from "./components/GlassIcons/GlassIcons";
-import { listTools, listProyek } from "./data";
+import { listTools, listProyek, listCertificates } from "./data";
 import ChromaGrid from "./components/ChromaGrid/ChromaGrid";
 import Aurora from "./components/Aurora/Aurora";
 import AOS from 'aos';
@@ -216,6 +216,57 @@ function App() {
                   <p className="text-sm text-zinc-400 truncate">{tool.ket}</p>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+        <div className="certificates mt-32" id="certificates">
+          <h1
+            className="text-4xl/snug font-bold mb-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            Certificates & Achievements
+          </h1>
+          <p
+            className="w-full md:w-3/5 text-base/loose opacity-50"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-once="true"
+          >
+            Bukti pengalaman dan pencapaian yang bisa kamu klik untuk melihat
+            detail sertifikat.
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {listCertificates.map((certificate, index) => (
+              <a
+                key={certificate.id}
+                href={certificate.image}
+                target="_blank"
+                rel="noreferrer"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay={200 + index * 150}
+                data-aos-once="true"
+                className="group rounded-2xl border border-zinc-700 bg-zinc-900/70 p-4 shadow-lg transition hover:border-violet-500/60 hover:bg-zinc-800/70"
+              >
+                <div className="overflow-hidden rounded-xl border border-zinc-800">
+                  <img
+                    src={certificate.image}
+                    alt={certificate.alt}
+                    className="h-60 w-full object-cover transition duration-300 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="mt-4 space-y-1">
+                  <h3 className="text-lg font-semibold text-white">
+                    {certificate.title}
+                  </h3>
+                  <p className="text-sm text-zinc-400">{certificate.issuer}</p>
+                  <p className="text-xs text-zinc-500">{certificate.date}</p>
+                </div>
+              </a>
             ))}
           </div>
         </div>
