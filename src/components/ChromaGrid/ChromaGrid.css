@@ -99,12 +99,37 @@
   transition: background 0.3s ease;
 }
 
-.chroma-img-wrapper img {
+.chroma-screenshot {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.chroma-screenshot--icon {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 20px;
+  margin: 20px auto;
+  border: none;
+}
+
+.chroma-logo {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
   width: 96px;
   height: 96px;
   object-fit: contain;
   border-radius: 10px;
   display: block;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
 }
 
 .chroma-info {
@@ -114,7 +139,7 @@
   color: #fff;
   font-family: system-ui, sans-serif;
   display: grid;
-  row-gap: rem;
+  row-gap: 0.6rem;
   column-gap: 0.75rem;
 }
 
@@ -137,6 +162,45 @@
   font-size: 0.9rem;
   text-decoration: none;
   transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.chroma-button--secondary {
+  background: transparent;
+  border-color: rgba(124, 58, 237, 0.6);
+  color: #e9d5ff;
+}
+
+.chroma-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chroma-stack li {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  color: #e2e8f0;
+}
+
+.chroma-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.chroma-repo-label {
+  font-size: 0.8rem;
+  color: #cbd5f5;
+  padding: 0.2rem 0.75rem;
+  border: 1px dashed rgba(148, 163, 184, 0.5);
+  border-radius: 999px;
 }
 
 .chroma-button:hover {
