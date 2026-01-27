@@ -6,7 +6,7 @@ import ScrambledText from "./components/ScrambledText/ScrambledText";
 import SplitText from "./components/SplitText/SplitText";
 import Lanyard from "./components/Lanyard/Lanyard";
 import GlassIcons from "./components/GlassIcons/GlassIcons";
-import { listTools, listProyek } from "./data";
+import { listTools, listProyek, listCertificates } from "./data";
 import ChromaGrid from "./components/ChromaGrid/ChromaGrid";
 import Aurora from "./components/Aurora/Aurora";
 import AOS from 'aos';
@@ -20,6 +20,7 @@ function App() {
   const aboutRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [webglSupported, setWebglSupported] = useState(true);
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
 
   useEffect(() => {
 
@@ -219,6 +220,99 @@ function App() {
             ))}
           </div>
         </div>
+        <div className="certificates mt-32" id="certificates">
+          <h1
+            className="text-4xl/snug font-bold mb-4"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-once="true"
+          >
+            Certificates & Achievements
+          </h1>
+          <p
+            className="w-full md:w-3/5 text-base/loose opacity-50"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-once="true"
+          >
+            Bukti pengalaman dan pencapaian yang bisa kamu klik untuk melihat
+            detail sertifikat.
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {listCertificates.map((certificate, index) => (
+              <button
+                key={certificate.id}
+                type="button"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay={200 + index * 150}
+                data-aos-once="true"
+                className="group rounded-2xl border border-zinc-700 bg-zinc-900/70 p-4 shadow-lg transition hover:border-violet-500/60 hover:bg-zinc-800/70"
+                onClick={() => setSelectedCertificate(certificate)}
+              >
+                <div className="overflow-hidden rounded-xl border border-zinc-800">
+                  <img
+                    src={certificate.image}
+                    alt={certificate.alt}
+                    className="h-32 w-full object-cover transition duration-300 group-hover:scale-105 md:h-40"
+                    loading="lazy"
+                    onError={(event) => {
+                      if (certificate.fallbackImage) {
+                        event.currentTarget.src = certificate.fallbackImage;
+                      }
+                    }}
+                  />
+                </div>
+                <div className="mt-4 space-y-1 text-left">
+                  <h3 className="text-lg font-semibold text-white">
+                    {certificate.title}
+                  </h3>
+                  <p className="text-sm text-zinc-400">{certificate.issuer}</p>
+                  <p className="text-xs text-zinc-500">{certificate.date}</p>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+        {selectedCertificate ? (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+            role="dialog"
+            aria-modal="true"
+          >
+            <div className="relative w-full max-w-4xl rounded-2xl border border-zinc-700 bg-zinc-900 p-4 shadow-xl">
+              <button
+                type="button"
+                className="absolute right-4 top-4 rounded-full border border-zinc-700 bg-zinc-800 px-3 py-1 text-sm text-white transition hover:bg-zinc-700"
+                onClick={() => setSelectedCertificate(null)}
+              >
+                Close
+              </button>
+              <img
+                src={selectedCertificate.image}
+                alt={selectedCertificate.alt}
+                className="max-h-[80vh] w-full rounded-xl object-contain"
+                onError={(event) => {
+                  if (selectedCertificate.fallbackImage) {
+                    event.currentTarget.src = selectedCertificate.fallbackImage;
+                  }
+                }}
+              />
+              <div className="mt-4 text-left">
+                <h3 className="text-xl font-semibold text-white">
+                  {selectedCertificate.title}
+                </h3>
+                <p className="text-sm text-zinc-400">
+                  {selectedCertificate.issuer}
+                </p>
+                <p className="text-xs text-zinc-500">
+                  {selectedCertificate.date}
+                </p>
+              </div>
+            </div>
+          </div>
+        ) : null}
         {/* tentang */}
 
         {/* Proyek */}
