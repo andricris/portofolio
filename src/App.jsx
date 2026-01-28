@@ -239,7 +239,7 @@ function App() {
             Bukti pengalaman dan pencapaian yang bisa kamu klik untuk melihat
             detail sertifikat.
           </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
             {listCertificates.map((certificate, index) => (
               <button
                 key={certificate.id}
@@ -248,14 +248,14 @@ function App() {
                 data-aos-duration="1000"
                 data-aos-delay={200 + index * 150}
                 data-aos-once="true"
-                className="group rounded-2xl border border-zinc-700 bg-zinc-900/70 p-4 shadow-lg transition hover:border-violet-500/60 hover:bg-zinc-800/70"
+                className="group rounded-xl border border-zinc-700 bg-zinc-900/70 p-3 shadow-lg transition hover:border-violet-500/60 hover:bg-zinc-800/70"
                 onClick={() => setSelectedCertificate(certificate)}
               >
-                <div className="overflow-hidden rounded-xl border border-zinc-800">
+                <div className="aspect-square overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950">
                   <img
                     src={certificate.image}
                     alt={certificate.alt}
-                    className="h-32 w-full object-cover transition duration-300 group-hover:scale-105 md:h-40"
+                    className="h-full w-full object-contain transition duration-300 group-hover:scale-105"
                     loading="lazy"
                     onError={(event) => {
                       if (certificate.fallbackImage) {
@@ -263,13 +263,6 @@ function App() {
                       }
                     }}
                   />
-                </div>
-                <div className="mt-4 space-y-1 text-left">
-                  <h3 className="text-lg font-semibold text-white">
-                    {certificate.title}
-                  </h3>
-                  <p className="text-sm text-zinc-400">{certificate.issuer}</p>
-                  <p className="text-xs text-zinc-500">{certificate.date}</p>
                 </div>
               </button>
             ))}
