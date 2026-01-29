@@ -317,10 +317,6 @@ function App() {
           <div style={{ height: 'auto', position: 'relative' }} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true" >
             <ChromaGrid
               items={listProyek}
-              radius={500}
-              damping={0.45}
-              fadeOut={0.6}
-              ease="power3.out"
             />
           </div>
         </div>
