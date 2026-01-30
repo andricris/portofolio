@@ -144,56 +144,60 @@ function App() {
                   About Me
                 </h2>
 
-                <div className="text-base md:text-lg leading-relaxed text-gray-300 space-y-6 mb-10">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Target 2026</h3>
-                    <ul className="list-disc list-inside space-y-1">
-                      <li>Berkontribusi pada proyek data open-source.</li>
-                      <li>Membangun portfolio analisis data yang impactful.</li>
-                      <li>Mendalami advanced SQL.</li>
-                      <li>Mengeksplorasi cloud data platform (AWS/GCP/Azure).</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Fokus Saat Ini</h3>
-                    <ul className="list-disc list-inside space-y-1">
-                      <li>📊 Advanced Data Analytics & Business Intelligence.</li>
-                      <li>🤖 Machine Learning & AI Fundamentals.</li>
-                      <li>📈 Data Visualization Best Practices.</li>
-                      <li>🐍 Python for Data Science.</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">Portfolio Highlight</h3>
-                    <ul className="list-disc list-inside space-y-1">
-                      <li>Dashboard & Reporting — merapikan metrik inti agar cepat dibaca dan mudah dipresentasikan.</li>
-                      <li>Exploratory Data Analysis (EDA) — menemukan pola, anomali, dan peluang yang tersembunyi.</li>
-                      <li>Data Automation — pipeline sederhana untuk mempercepat proses analisis.</li>
-                      <li>Visualization & Storytelling — visual yang enak dilihat dan mudah dipahami.</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">✨ Tentang Saya</h3>
-                    <p>
+                <div className="text-base md:text-[17px] leading-relaxed text-gray-300 space-y-8 mb-10">
+                  <div className="space-y-2">
+                    <h3 className="text-lg md:text-xl font-semibold tracking-wide text-white">✨ Tentang Saya</h3>
+                    <p className="text-gray-300">
                       Saya fokus pada data analytics dan data storytelling untuk membantu bisnis mengambil keputusan
                       yang lebih tepat. Saya suka membangun dashboard yang rapi, insight yang actionable, dan workflow
                       data yang efisien.
                     </p>
-                    <p className="mt-2 italic text-violet-200">
+                    <p className="text-sm md:text-base italic text-violet-200">
                       "Data yang baik bukan hanya rapi, tapi juga berdampak."
                     </p>
                   </div>
 
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">✅ Yang Bisa Saya Bantu</h3>
-                    <ul className="list-disc list-inside space-y-1">
-                      <li>Dashboard KPI & Executive Summary yang mudah dibaca dan siap presentasi.</li>
-                      <li>Data cleaning & transformasi agar analisis lebih akurat dan konsisten.</li>
-                      <li>EDA & insight bisnis untuk menemukan peluang pertumbuhan.</li>
-                      <li>Automasi laporan supaya proses berulang jadi lebih cepat.</li>
+                  <div className="space-y-3">
+                    <h3 className="text-lg md:text-xl font-semibold tracking-wide text-white">Fokus Saat Ini</h3>
+                    <ul className="space-y-2 text-sm md:text-base">
+                      <li className="flex items-start gap-2">
+                        <span className="text-base">📊</span>
+                        <span>Advanced Data Analytics & Business Intelligence.</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-base">🤖</span>
+                        <span>Machine Learning & AI Fundamentals.</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-base">📈</span>
+                        <span>Data Visualization Best Practices.</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-base">🐍</span>
+                        <span>Python for Data Science.</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="space-y-3">
+                    <h3 className="text-lg md:text-xl font-semibold tracking-wide text-white">Portfolio Highlight</h3>
+                    <ul className="space-y-2 text-sm md:text-base">
+                      <li className="flex gap-2">
+                        <span className="text-violet-400">•</span>
+                        <span>Dashboard & Reporting — merapikan metrik inti agar cepat dibaca dan mudah dipresentasikan.</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-violet-400">•</span>
+                        <span>Exploratory Data Analysis (EDA) — menemukan pola, anomali, dan peluang yang tersembunyi.</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-violet-400">•</span>
+                        <span>Data Automation — pipeline sederhana untuk mempercepat proses analisis.</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-violet-400">•</span>
+                        <span>Visualization & Storytelling — visual yang enak dilihat dan mudah dipahami.</span>
+                      </li>
                     </ul>
                   </div>
                 </div>
