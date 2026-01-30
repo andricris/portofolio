@@ -97,7 +97,7 @@ function App() {
               <ShinyText text="Hi I'm Andri Chris" disabled={false} speed={3} className='custom-class' />
             </h1>
             <BlurText
-              text="A passionate application and web developer dedicated to crafting modern, high-performance digital experiences through innovative and user-friendly solutions."
+              text="Saya fokus pada data analytics dan data storytelling untuk membantu bisnis mengambil keputusan yang lebih tepat melalui insight yang actionable dan workflow data yang efisien."
               delay={150}
               animateBy="words"
               direction="top"
@@ -122,7 +122,7 @@ function App() {
           <div className="md:ml-auto animate__animated animate__fadeInUp animate__delay-4s">
             <ProfileCard
               name="Andri Chris"
-              title="Web Developer"
+              title="Data Analyst"
               handle="andrichris"
               status="Online"
               contactText="Contact Me"
@@ -144,13 +144,59 @@ function App() {
                   About Me
                 </h2>
 
-                <BlurText
-                  text="I’m Andri Chris, a full-stack developer passionate about building modern, high-performance applications with an intuitive user experience. I enjoy working with the latest technologies like Artificial Intelligence, Machine Learning, and cloud-based development, blending creativity with precision to deliver impactful solutions. With over three years of experience and more than 20 completed projects, I’m committed to helping users and businesses grow in the digital era through functional, aesthetic, and scalable digital products."
-                  delay={150}
-                  animateBy="words"
-                  direction="top"
-                  className="text-base md:text-lg leading-relaxed mb-10 text-gray-300"
-                />
+                <div className="text-base md:text-lg leading-relaxed text-gray-300 space-y-6 mb-10">
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Target 2026</h3>
+                    <ul className="list-disc list-inside space-y-1">
+                      <li>Berkontribusi pada proyek data open-source.</li>
+                      <li>Membangun portfolio analisis data yang impactful.</li>
+                      <li>Mendalami advanced SQL.</li>
+                      <li>Mengeksplorasi cloud data platform (AWS/GCP/Azure).</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Fokus Saat Ini</h3>
+                    <ul className="list-disc list-inside space-y-1">
+                      <li>📊 Advanced Data Analytics & Business Intelligence.</li>
+                      <li>🤖 Machine Learning & AI Fundamentals.</li>
+                      <li>📈 Data Visualization Best Practices.</li>
+                      <li>🐍 Python for Data Science.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Portfolio Highlight</h3>
+                    <ul className="list-disc list-inside space-y-1">
+                      <li>Dashboard & Reporting — merapikan metrik inti agar cepat dibaca dan mudah dipresentasikan.</li>
+                      <li>Exploratory Data Analysis (EDA) — menemukan pola, anomali, dan peluang yang tersembunyi.</li>
+                      <li>Data Automation — pipeline sederhana untuk mempercepat proses analisis.</li>
+                      <li>Visualization & Storytelling — visual yang enak dilihat dan mudah dipahami.</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">✨ Tentang Saya</h3>
+                    <p>
+                      Saya fokus pada data analytics dan data storytelling untuk membantu bisnis mengambil keputusan
+                      yang lebih tepat. Saya suka membangun dashboard yang rapi, insight yang actionable, dan workflow
+                      data yang efisien.
+                    </p>
+                    <p className="mt-2 italic text-violet-200">
+                      "Data yang baik bukan hanya rapi, tapi juga berdampak."
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">✅ Yang Bisa Saya Bantu</h3>
+                    <ul className="list-disc list-inside space-y-1">
+                      <li>Dashboard KPI & Executive Summary yang mudah dibaca dan siap presentasi.</li>
+                      <li>Data cleaning & transformasi agar analisis lebih akurat dan konsisten.</li>
+                      <li>EDA & insight bisnis untuk menemukan peluang pertumbuhan.</li>
+                      <li>Automasi laporan supaya proses berulang jadi lebih cepat.</li>
+                    </ul>
+                  </div>
+                </div>
 
                 <div className="flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left gap-y-8 sm:gap-y-0 mb-4 w-full">
                   <div>
