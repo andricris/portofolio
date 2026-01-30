@@ -97,7 +97,7 @@ function App() {
               <ShinyText text="Hi I'm Andri Chris" disabled={false} speed={3} className='custom-class' />
             </h1>
             <BlurText
-              text="A passionate application and web developer dedicated to crafting modern, high-performance digital experiences through innovative and user-friendly solutions."
+              text="Saya fokus pada data analytics dan data storytelling untuk membantu bisnis mengambil keputusan yang lebih tepat melalui insight yang actionable dan workflow data yang efisien."
               delay={150}
               animateBy="words"
               direction="top"
@@ -122,7 +122,7 @@ function App() {
           <div className="md:ml-auto animate__animated animate__fadeInUp animate__delay-4s">
             <ProfileCard
               name="Andri Chris"
-              title="Web Developer"
+              title="Data Analyst"
               handle="andrichris"
               status="Online"
               contactText="Contact Me"
@@ -144,13 +144,63 @@ function App() {
                   About Me
                 </h2>
 
-                <BlurText
-                  text="I’m Andri Chris, a full-stack developer passionate about building modern, high-performance applications with an intuitive user experience. I enjoy working with the latest technologies like Artificial Intelligence, Machine Learning, and cloud-based development, blending creativity with precision to deliver impactful solutions. With over three years of experience and more than 20 completed projects, I’m committed to helping users and businesses grow in the digital era through functional, aesthetic, and scalable digital products."
-                  delay={150}
-                  animateBy="words"
-                  direction="top"
-                  className="text-base md:text-lg leading-relaxed mb-10 text-gray-300"
-                />
+                <div className="text-base md:text-[17px] leading-relaxed text-gray-300 space-y-8 mb-10">
+                  <div className="space-y-2">
+                    <h3 className="text-lg md:text-xl font-semibold tracking-wide text-white">✨ Tentang Saya</h3>
+                    <p className="text-gray-300">
+                      Saya fokus pada data analytics dan data storytelling untuk membantu bisnis mengambil keputusan
+                      yang lebih tepat. Saya suka membangun dashboard yang rapi, insight yang actionable, dan workflow
+                      data yang efisien.
+                    </p>
+                    <p className="text-sm md:text-base italic text-violet-200">
+                      "Data yang baik bukan hanya rapi, tapi juga berdampak."
+                    </p>
+                  </div>
+
+                  <div className="space-y-3">
+                    <h3 className="text-lg md:text-xl font-semibold tracking-wide text-white">Fokus Saat Ini</h3>
+                    <ul className="space-y-2 text-sm md:text-base">
+                      <li className="flex items-start gap-2">
+                        <span className="text-base">📊</span>
+                        <span>Advanced Data Analytics & Business Intelligence.</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-base">🤖</span>
+                        <span>Machine Learning & AI Fundamentals.</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-base">📈</span>
+                        <span>Data Visualization Best Practices.</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="text-base">🐍</span>
+                        <span>Python for Data Science.</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="space-y-3">
+                    <h3 className="text-lg md:text-xl font-semibold tracking-wide text-white">Portfolio Highlight</h3>
+                    <ul className="space-y-2 text-sm md:text-base">
+                      <li className="flex gap-2">
+                        <span className="text-violet-400">•</span>
+                        <span>Dashboard & Reporting — merapikan metrik inti agar cepat dibaca dan mudah dipresentasikan.</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-violet-400">•</span>
+                        <span>Exploratory Data Analysis (EDA) — menemukan pola, anomali, dan peluang yang tersembunyi.</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-violet-400">•</span>
+                        <span>Data Automation — pipeline sederhana untuk mempercepat proses analisis.</span>
+                      </li>
+                      <li className="flex gap-2">
+                        <span className="text-violet-400">•</span>
+                        <span>Visualization & Storytelling — visual yang enak dilihat dan mudah dipahami.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
 
                 <div className="flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left gap-y-8 sm:gap-y-0 mb-4 w-full">
                   <div>
