@@ -146,7 +146,6 @@ function App() {
 
                 <div className="text-base md:text-[17px] leading-relaxed text-gray-300 space-y-8 mb-10">
                   <div className="space-y-2">
-                    <h3 className="text-lg md:text-xl font-semibold tracking-wide text-white">✨ Tentang Saya</h3>
                     <p className="text-gray-300">
                       Saya fokus pada data analytics dan data storytelling untuk membantu bisnis mengambil keputusan
                       yang lebih tepat. Saya suka membangun dashboard yang rapi, insight yang actionable, dan workflow
