@@ -94,15 +94,26 @@ function App() {
               <q>Avoid or just undertake it</q>
             </div>
             <h1 className="text-5xl font-bold mb-6">
-              <ShinyText text="Hi I'm Andri Chris" disabled={false} speed={3} className='custom-class' />
+              <ShinyText text="Hi I'm Andri Chris" disabled={false} speed={3} className="custom-class" />
             </h1>
             <BlurText
-              text="Saya fokus pada data analytics dan data storytelling untuk membantu bisnis mengambil keputusan yang lebih tepat melalui insight yang actionable dan workflow data yang efisien."
+              text="Data analyst yang membantu tim mempercepat laporan hingga 35% lewat otomatisasi, dashboard yang rapi, dan insight yang langsung bisa dipakai."
               delay={150}
               animateBy="words"
               direction="top"
               className=" mb-6"
             />
+            <div className="flex flex-wrap gap-3 mb-6 text-sm text-zinc-300">
+              <span className="rounded-full border border-violet-500/40 bg-violet-500/10 px-4 py-2">
+                ⏱️ Laporan 35% lebih cepat
+              </span>
+              <span className="rounded-full border border-blue-500/40 bg-blue-500/10 px-4 py-2">
+                📊 Dashboard siap eksekusi
+              </span>
+              <span className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-4 py-2">
+                ⚙️ Workflow data efisien
+              </span>
+            </div>
             <div className="flex items-center sm:gap-4 gap-2">
               <a 
                 href={`${baseUrl}assets/CV.pdf`} 
