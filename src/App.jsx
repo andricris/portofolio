@@ -94,15 +94,26 @@ function App() {
               <q>Avoid or just undertake it</q>
             </div>
             <h1 className="text-5xl font-bold mb-6">
-              <ShinyText text="Hi I'm Andri Chris" disabled={false} speed={3} className='custom-class' />
+              <ShinyText text="Hi I'm Andri Chris" disabled={false} speed={3} className="custom-class" />
             </h1>
             <BlurText
-              text="Saya fokus pada data analytics dan data storytelling untuk membantu bisnis mengambil keputusan yang lebih tepat melalui insight yang actionable dan workflow data yang efisien."
+              text="Data analyst yang membantu tim mempercepat laporan hingga 35% lewat otomatisasi, dashboard yang rapi, dan insight yang langsung bisa dipakai."
               delay={150}
               animateBy="words"
               direction="top"
               className=" mb-6"
             />
+            <div className="flex flex-wrap gap-3 mb-6 text-sm text-zinc-300">
+              <span className="rounded-full border border-violet-500/40 bg-violet-500/10 px-4 py-2">
+                ⏱️ Laporan 35% lebih cepat
+              </span>
+              <span className="rounded-full border border-blue-500/40 bg-blue-500/10 px-4 py-2">
+                📊 Dashboard siap eksekusi
+              </span>
+              <span className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-4 py-2">
+                ⚙️ Workflow data efisien
+              </span>
+            </div>
             <div className="flex items-center sm:gap-4 gap-2">
               <a 
                 href={`${baseUrl}assets/CV.pdf`} 
@@ -146,14 +157,13 @@ function App() {
 
                 <div className="text-base md:text-[17px] leading-relaxed text-gray-300 space-y-8 mb-10">
                   <div className="space-y-2">
-                    <h3 className="text-lg md:text-xl font-semibold tracking-wide text-white">✨ Tentang Saya</h3>
                     <p className="text-gray-300">
-                      Saya fokus pada data analytics dan data storytelling untuk membantu bisnis mengambil keputusan
-                      yang lebih tepat. Saya suka membangun dashboard yang rapi, insight yang actionable, dan workflow
-                      data yang efisien.
+                      Data analyst yang menjembatani kebutuhan bisnis dan data, dari cleaning hingga storytelling.
+                      Fokus saya adalah membuat data mudah dipahami, mempercepat reporting, dan membantu tim mengambil
+                      keputusan lebih cepat dengan dashboard yang jelas dan workflow yang efisien.
                     </p>
                     <p className="text-sm md:text-base italic text-violet-200">
-                      "Data yang baik bukan hanya rapi, tapi juga berdampak."
+                      "Insight yang bagus lahir dari data yang rapi, proses yang cepat, dan cerita yang jelas."
                     </p>
                   </div>
 
@@ -207,19 +217,19 @@ function App() {
                     <h1 className="text-3xl md:text-4xl mb-1">
                       20<span className="text-violet-500">+</span>
                     </h1>
-                    <p>Project Finished</p>
+                    <p>Projects Delivered</p>
                   </div>
                   <div>
                     <h1 className="text-3xl md:text-4xl mb-1">
                       3<span className="text-violet-500">+</span>
                     </h1>
-                    <p>Years of Experience</p>
+                    <p>Years in Analytics</p>
                   </div>
                   <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-once="true">
                     <h1 className="text-3xl md:text-4xl mb-1">
                       3.81<span className="text-violet-500">/4.00</span>
                     </h1>
-                    <p>GPA</p>
+                    <p>Academic GPA</p>
                   </div>
                 </div>
 
