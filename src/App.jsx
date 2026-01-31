@@ -158,12 +158,12 @@ function App() {
                 <div className="text-base md:text-[17px] leading-relaxed text-gray-300 space-y-8 mb-10">
                   <div className="space-y-2">
                     <p className="text-gray-300">
-                      Saya fokus pada data analytics dan data storytelling untuk membantu bisnis mengambil keputusan
-                      yang lebih tepat. Saya suka membangun dashboard yang rapi, insight yang actionable, dan workflow
-                      data yang efisien.
+                      Data analyst yang menjembatani kebutuhan bisnis dan data, dari cleaning hingga storytelling.
+                      Fokus saya adalah membuat data mudah dipahami, mempercepat reporting, dan membantu tim mengambil
+                      keputusan lebih cepat dengan dashboard yang jelas dan workflow yang efisien.
                     </p>
                     <p className="text-sm md:text-base italic text-violet-200">
-                      "Data yang baik bukan hanya rapi, tapi juga berdampak."
+                      "Insight yang bagus lahir dari data yang rapi, proses yang cepat, dan cerita yang jelas."
                     </p>
                   </div>
 
@@ -217,19 +217,19 @@ function App() {
                     <h1 className="text-3xl md:text-4xl mb-1">
                       20<span className="text-violet-500">+</span>
                     </h1>
-                    <p>Project Finished</p>
+                    <p>Projects Delivered</p>
                   </div>
                   <div>
                     <h1 className="text-3xl md:text-4xl mb-1">
                       3<span className="text-violet-500">+</span>
                     </h1>
-                    <p>Years of Experience</p>
+                    <p>Years in Analytics</p>
                   </div>
                   <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-once="true">
                     <h1 className="text-3xl md:text-4xl mb-1">
                       3.81<span className="text-violet-500">/4.00</span>
                     </h1>
-                    <p>GPA</p>
+                    <p>Academic GPA</p>
                   </div>
                 </div>
 
