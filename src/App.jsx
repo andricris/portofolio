@@ -94,15 +94,26 @@ function App() {
               <q>Avoid or just undertake it</q>
             </div>
             <h1 className="text-5xl font-bold mb-6">
-              <ShinyText text="Hi I'm Andri Chris" disabled={false} speed={3} className='custom-class' />
+              <ShinyText text="Hi I'm Andri Chris" disabled={false} speed={3} className="custom-class" />
             </h1>
             <BlurText
-              text="Saya fokus pada data analytics dan data storytelling untuk membantu bisnis mengambil keputusan yang lebih tepat melalui insight yang actionable dan workflow data yang efisien."
+              text="Data analyst yang membantu tim mempercepat laporan hingga 35% lewat otomatisasi, dashboard yang rapi, dan insight yang langsung bisa dipakai."
               delay={150}
               animateBy="words"
               direction="top"
               className=" mb-6"
             />
+            <div className="flex flex-wrap gap-3 mb-6 text-sm text-zinc-300">
+              <span className="rounded-full border border-violet-500/40 bg-violet-500/10 px-4 py-2">
+                ⏱️ Laporan 35% lebih cepat
+              </span>
+              <span className="rounded-full border border-blue-500/40 bg-blue-500/10 px-4 py-2">
+                📊 Dashboard siap eksekusi
+              </span>
+              <span className="rounded-full border border-emerald-500/40 bg-emerald-500/10 px-4 py-2">
+                ⚙️ Workflow data efisien
+              </span>
+            </div>
             <div className="flex items-center sm:gap-4 gap-2">
               <a 
                 href={`${baseUrl}assets/CV.pdf`} 
@@ -146,7 +157,6 @@ function App() {
 
                 <div className="text-base md:text-[17px] leading-relaxed text-gray-300 space-y-8 mb-10">
                   <div className="space-y-2">
-                    <h3 className="text-lg md:text-xl font-semibold tracking-wide text-white">✨ Tentang Saya</h3>
                     <p className="text-gray-300">
                       Saya fokus pada data analytics dan data storytelling untuk membantu bisnis mengambil keputusan
                       yang lebih tepat. Saya suka membangun dashboard yang rapi, insight yang actionable, dan workflow
