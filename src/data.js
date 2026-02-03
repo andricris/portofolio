@@ -49,6 +49,28 @@ export const listCertificates = [
     fallbackImage: "/assets/certificates/sertifikat-magang.svg",
     alt: "Sertifikat Magang Andri Chris dari PT Mencari Cinta Sejati.",
   },
+  {
+    id: 3,
+    title: "DeepLearning.AI Online Certificate",
+    issuer: "DeepLearning.AI",
+    date: "Online",
+    image:
+      "https://learn.deeplearning.ai/certificates/6f14a665-f7ad-4ede-bdf4-ff4701af776a?usp=sharing",
+    fallbackImage: "/assets/certificates/sertifikat-penghargaan.svg",
+    alt: "DeepLearning.AI online certificate.",
+    url: "https://learn.deeplearning.ai/certificates/6f14a665-f7ad-4ede-bdf4-ff4701af776a?usp=sharing",
+  },
+  {
+    id: 4,
+    title: "DeepLearning.AI Online Certificate",
+    issuer: "DeepLearning.AI",
+    date: "Online",
+    image:
+      "https://learn.deeplearning.ai/certificates/a8ef65e7-bf00-4ae2-ba15-8617e5329019?usp=sharing",
+    fallbackImage: "/assets/certificates/sertifikat-penghargaan.svg",
+    alt: "DeepLearning.AI online certificate.",
+    url: "https://learn.deeplearning.ai/certificates/a8ef65e7-bf00-4ae2-ba15-8617e5329019?usp=sharing",
+  },
 ];
 
 export const listTools = [
