@@ -364,6 +364,16 @@ function App() {
                 <p className="text-xs text-zinc-500">
                   {selectedCertificate.date}
                 </p>
+                {selectedCertificate.url ? (
+                  <a
+                    href={selectedCertificate.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 inline-flex items-center gap-2 rounded-full border border-violet-400/60 px-4 py-2 text-sm text-violet-200 transition hover:border-violet-300 hover:text-white"
+                  >
+                    Lihat Sertifikat
+                  </a>
+                ) : null}
               </div>
             </div>
           </div>
