@@ -511,4 +511,18 @@ export const listProyek = [
     repoLabel: "Private repo",
     dad: "2500",
   },
+  {
+    id: 26,
+    image: "https://cdn-icons-png.flaticon.com/512/7314/7314483.png",
+    title: "Migrasi PO Principal",
+    subtitle: "Migrasi PO Principal",
+    fullDescription: "Migrasi PO Principal",
+    borderColor: "#10B981",
+    gradient: "linear-gradient(180deg, #10B981, #000)",
+    url: "https://quiet-speculoos-21e41f.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
+    dad: "2600",
+  },
 ];
