@@ -35,7 +35,9 @@ function App() {
   useEffect(() => {
     const refreshIntervalMs = 5 * 60 * 1000;
     const intervalId = window.setInterval(() => {
-      window.location.reload();
+      const hardRefreshUrl = new URL(window.location.href);
+      hardRefreshUrl.searchParams.set("refresh", Date.now().toString());
+      window.location.replace(hardRefreshUrl.toString());
     }, refreshIntervalMs);
 
     return () => window.clearInterval(intervalId);
