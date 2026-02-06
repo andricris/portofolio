@@ -127,6 +127,309 @@
   transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
+.chroma-button--morph {
+  position: relative;
+  padding: 0.65rem 1.8rem;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  overflow: visible;
+  isolation: isolate;
+}
+
+.chroma-button--morph:hover {
+  background: transparent;
+  border-color: transparent;
+}
+
+.chroma-button--morph .btn-fill {
+  position: absolute;
+  inset: 0;
+  background: #0d0d0d;
+  border-radius: 999px;
+  transition: border-radius 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 1;
+}
+
+.chroma-button--morph:hover .btn-fill {
+  border-radius: 50px;
+  animation: jelly 0.5s ease;
+}
+
+@keyframes jelly {
+  0% {
+    transform: scale(1, 1);
+  }
+  30% {
+    transform: scale(1.15, 0.85);
+  }
+  50% {
+    transform: scale(0.9, 1.1);
+  }
+  70% {
+    transform: scale(1.05, 0.95);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.chroma-button--morph .orbit-dots {
+  position: absolute;
+  inset: -24px;
+  pointer-events: none;
+}
+
+.chroma-button--morph .orbit-dots span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #0d0d0d;
+  border-radius: 50%;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.chroma-button--morph:hover .orbit-dots span {
+  opacity: 1;
+}
+
+.chroma-button--morph .orbit-dots span:nth-child(1) {
+  top: 0;
+  left: 50%;
+  animation: orbit1 3s linear infinite;
+}
+
+.chroma-button--morph .orbit-dots span:nth-child(2) {
+  bottom: 0;
+  left: 50%;
+  animation: orbit2 3s linear infinite;
+}
+
+.chroma-button--morph .orbit-dots span:nth-child(3) {
+  top: 50%;
+  left: 0;
+  animation: orbit3 4s linear infinite;
+}
+
+.chroma-button--morph .orbit-dots span:nth-child(4) {
+  top: 50%;
+  right: 0;
+  animation: orbit4 4s linear infinite;
+}
+
+@keyframes orbit1 {
+  0% {
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  25% {
+    transform: translateX(30px) translateY(10px) scale(0.6);
+  }
+  50% {
+    transform: translateX(-50%) translateY(20px) scale(1);
+  }
+  75% {
+    transform: translateX(-80px) translateY(10px) scale(0.6);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+@keyframes orbit2 {
+  0% {
+    transform: translateX(-50%) translateY(0) scale(0.6);
+  }
+  25% {
+    transform: translateX(-80px) translateY(-10px) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px) scale(0.6);
+  }
+  75% {
+    transform: translateX(30px) translateY(-10px) scale(1);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0) scale(0.6);
+  }
+}
+
+@keyframes orbit3 {
+  0% {
+    transform: translateY(-50%) translateX(0) scale(0.8);
+  }
+  50% {
+    transform: translateY(-50%) translateX(-15px) scale(1.2);
+  }
+  100% {
+    transform: translateY(-50%) translateX(0) scale(0.8);
+  }
+}
+
+@keyframes orbit4 {
+  0% {
+    transform: translateY(-50%) translateX(0) scale(1.2);
+  }
+  50% {
+    transform: translateY(-50%) translateX(15px) scale(0.8);
+  }
+  100% {
+    transform: translateY(-50%) translateX(0) scale(1.2);
+  }
+}
+
+.chroma-button--morph .btn-text {
+  position: relative;
+  display: inline-block;
+  z-index: 3;
+}
+
+.chroma-button--morph .btn-text span {
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition-delay: calc(var(--i) * 0.03s);
+}
+
+.chroma-button--morph:hover .btn-text span {
+  transform: translateY(-100%);
+  animation: letterBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+    forwards;
+  animation-delay: calc(var(--i) * 0.03s);
+}
+
+@keyframes letterBounce {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-120%);
+  }
+  70% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.chroma-button--morph .corners span {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #0d0d0d;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  opacity: 1;
+}
+
+.chroma-button--morph .corners span:nth-child(1) {
+  top: -8px;
+  left: -8px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.chroma-button--morph .corners span:nth-child(2) {
+  top: -8px;
+  right: -8px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.chroma-button--morph .corners span:nth-child(3) {
+  bottom: -8px;
+  left: -8px;
+  border-right: none;
+  border-top: none;
+}
+
+.chroma-button--morph .corners span:nth-child(4) {
+  bottom: -8px;
+  right: -8px;
+  border-left: none;
+  border-top: none;
+}
+
+.chroma-button--morph:hover .corners span {
+  opacity: 1;
+}
+
+.chroma-button--morph:hover .corners span:nth-child(1) {
+  transform: translate(-4px, -4px) rotate(-5deg);
+}
+
+.chroma-button--morph:hover .corners span:nth-child(2) {
+  transform: translate(4px, -4px) rotate(5deg);
+}
+
+.chroma-button--morph:hover .corners span:nth-child(3) {
+  transform: translate(-4px, 4px) rotate(5deg);
+}
+
+.chroma-button--morph:hover .corners span:nth-child(4) {
+  transform: translate(4px, 4px) rotate(-5deg);
+}
+
+.chroma-button--morph .shadow {
+  position: absolute;
+  inset: 4px;
+  background: rgba(13, 13, 13, 0.3);
+  border-radius: 999px;
+  filter: blur(12px);
+  z-index: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: translateY(8px);
+}
+
+.chroma-button--morph:hover .shadow {
+  border-radius: 50px;
+  transform: translateY(12px) scale(1.1);
+  filter: blur(16px);
+}
+
+.chroma-button--morph:active .btn-fill {
+  transform: scale(0.92);
+  transition: transform 0.1s ease;
+}
+
+.chroma-button--morph:active .shadow {
+  transform: translateY(3px) scale(0.85);
+  filter: blur(8px);
+  opacity: 0.5;
+  transition: all 0.1s ease;
+}
+
+.chroma-button--morph:active .btn-text {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.chroma-button--morph:active .corners span:nth-child(1) {
+  transform: translate(-12px, -12px) rotate(-15deg) scale(0.8);
+}
+
+.chroma-button--morph:active .corners span:nth-child(2) {
+  transform: translate(12px, -12px) rotate(15deg) scale(0.8);
+}
+
+.chroma-button--morph:active .corners span:nth-child(3) {
+  transform: translate(-12px, 12px) rotate(15deg) scale(0.8);
+}
+
+.chroma-button--morph:active .corners span:nth-child(4) {
+  transform: translate(12px, 12px) rotate(-15deg) scale(0.8);
+}
+
+.chroma-button--morph:active .orbit-dots span {
+  animation-play-state: paused;
+  transform: scale(1.5);
+}
+
 .chroma-button--secondary {
   background: transparent;
   border-color: rgba(124, 58, 237, 0.6);
@@ -170,6 +473,11 @@
   transform: translateY(-1px);
   background: rgba(124, 58, 237, 1);
   border-color: rgba(124, 58, 237, 0.9);
+}
+
+.chroma-button.chroma-button--morph:hover {
+  background: transparent;
+  border-color: transparent;
 }
 
 .chroma-button:focus-visible {

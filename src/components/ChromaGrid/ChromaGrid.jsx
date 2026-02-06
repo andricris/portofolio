@@ -60,12 +60,33 @@ export const ChromaGrid = ({
             <div className="chroma-links">
               {c.url && (
                 <a
-                  className="chroma-button"
+                  className="chroma-button chroma-button--morph"
                   href={c.url}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Live"
                 >
-                  Live
+                  <span className="btn-fill" aria-hidden="true" />
+                  <span className="shadow" aria-hidden="true" />
+                  <span className="orbit-dots" aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
+                    <span />
+                  </span>
+                  <span className="corners" aria-hidden="true">
+                    <span />
+                    <span />
+                    <span />
+                    <span />
+                  </span>
+                  <span className="btn-text">
+                    {"Live".split("").map((letter, index) => (
+                      <span key={`${letter}-${index}`} style={{ "--i": index }}>
+                        {letter}
+                      </span>
+                    ))}
+                  </span>
                 </a>
               )}
               {c.repoUrl ? (
