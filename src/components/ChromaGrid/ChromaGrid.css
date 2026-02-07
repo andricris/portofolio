@@ -57,22 +57,46 @@
 }
 
 .chroma-card:hover {
-  border-color: rgb(255, 0, 0);
-  animation: rgbBorder 3s linear infinite;
+  border-color: rgba(148, 163, 184, 0.25);
 }
 
-@keyframes rgbBorder {
+.chroma-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 22px;
+  background: conic-gradient(
+    #ff2d55,
+    #ff9f0a,
+    #ffd60a,
+    #34c759,
+    #32ade6,
+    #5856d6,
+    #af52de,
+    #ff2d55
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  animation: rgbSpin 4s linear infinite;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  padding: 2px;
+}
+
+.chroma-card:hover::before {
+  opacity: 1;
+}
+
+@keyframes rgbSpin {
   0% {
-    border-color: rgb(255, 0, 0);
-  }
-  33% {
-    border-color: rgb(0, 255, 0);
-  }
-  66% {
-    border-color: rgb(0, 0, 255);
+    transform: rotate(0deg);
   }
   100% {
-    border-color: rgb(255, 0, 0);
+    transform: rotate(360deg);
   }
 }
 
