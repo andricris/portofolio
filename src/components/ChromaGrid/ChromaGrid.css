@@ -54,6 +54,7 @@
     linear-gradient(180deg, rgba(2, 6, 23, 0.82), rgba(2, 6, 23, 0.97)),
     var(--card-gradient);
   box-shadow: 0 22px 45px rgba(2, 6, 23, 0.35);
+  isolation: isolate;
 }
 
 .chroma-card:hover {
@@ -63,8 +64,8 @@
 .chroma-card::before {
   content: "";
   position: absolute;
-  inset: 0;
-  border-radius: 20px;
+  inset: -1px;
+  border-radius: 21px;
   background: conic-gradient(
     #ff2d55,
     #ff9f0a,
@@ -79,16 +80,22 @@
   pointer-events: none;
   transition: opacity 0.3s ease;
   animation: rgbSpin 4s linear infinite;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   padding: 2px;
+  z-index: 0;
 }
 
 .chroma-card:hover::before {
   opacity: 1;
+}
+
+.chroma-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 @keyframes rgbSpin {
