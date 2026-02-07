@@ -49,7 +49,7 @@
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid rgba(148, 163, 184, 0.2);
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   background:
     linear-gradient(180deg, rgba(2, 6, 23, 0.82), rgba(2, 6, 23, 0.97)),
     var(--card-gradient);
@@ -57,7 +57,11 @@
 }
 
 .chroma-card:hover {
-  border-color: var(--card-border);
+  border-color: rgba(139, 92, 246, 0.6);
+  box-shadow:
+    0 22px 45px rgba(2, 6, 23, 0.35),
+    0 0 20px rgba(139, 92, 246, 0.35),
+    0 0 40px rgba(139, 92, 246, 0.25);
 }
 
 .chroma-img-wrapper {
