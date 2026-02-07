@@ -56,8 +56,38 @@
   box-shadow: 0 22px 45px rgba(2, 6, 23, 0.35);
 }
 
+.chroma-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: conic-gradient(
+    from 0deg,
+    #ff3b3b,
+    #ff9800,
+    #ffeb3b,
+    #4caf50,
+    #00bcd4,
+    #3f51b5,
+    #9c27b0,
+    #ff3b3b
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  animation: chroma-rotate 2.8s linear infinite;
+  pointer-events: none;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
 .chroma-card:hover {
   border-color: var(--card-border);
+}
+
+.chroma-card:hover::before {
+  opacity: 1;
 }
 
 .chroma-img-wrapper {
@@ -107,6 +137,18 @@
   display: grid;
   row-gap: 0.6rem;
   column-gap: 0.75rem;
+}
+
+@keyframes chroma-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chroma-card::before {
+    animation: none;
+  }
 }
 
 .chroma-info .role,
