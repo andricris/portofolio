@@ -48,9 +48,12 @@
   height: auto;
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid #333;
+  border: 1px solid rgba(148, 163, 184, 0.2);
   transition: border-color 0.3s ease;
-  background: var(--card-gradient);
+  background:
+    linear-gradient(180deg, rgba(2, 6, 23, 0.82), rgba(2, 6, 23, 0.97)),
+    var(--card-gradient);
+  box-shadow: 0 22px 45px rgba(2, 6, 23, 0.35);
 }
 
 .chroma-card:hover {
@@ -67,7 +70,7 @@
   align-items: center;
   justify-content: center;
   min-height: 160px;
-  background: transparent;
+  background: rgba(2, 6, 23, 0.25);
   transition: background 0.3s ease;
 }
 
@@ -77,7 +80,7 @@
   object-fit: cover;
   border-radius: 14px;
   display: block;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.2);
 }
 
 .chroma-logo {
@@ -108,7 +111,7 @@
 
 .chroma-info .role,
 .chroma-info .handle {
-  color: #aaa;
+  color: rgba(226, 232, 240, 0.7);
 }
 
 .chroma-button {
