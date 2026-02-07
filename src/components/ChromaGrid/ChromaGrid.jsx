@@ -46,9 +46,16 @@ export const ChromaGrid = ({
             )}
           </div>
           <footer className="chroma-info">
+            <span className="chroma-badge">
+              {c.category ?? c.stack?.[0] ?? "Project"}
+            </span>
             <h3 className="name">{c.title}</h3>
             {c.handle && <span className="handle">{c.handle}</span>}
             <p className="role">{c.subtitle}</p>
+            <p className="chroma-description">
+              {c.description ??
+                "Dirancang untuk mempercepat alur kerja dan memudahkan monitoring. UI ringkas agar cepat dipahami."}
+            </p>
             {c.location && <span className="location">{c.location}</span>}
             {c.stack?.length ? (
               <ul className="chroma-stack" aria-label="Tech stack">
