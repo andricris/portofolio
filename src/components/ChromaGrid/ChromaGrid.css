@@ -57,7 +57,23 @@
 }
 
 .chroma-card:hover {
-  border-color: rgb(139, 92, 246);
+  border-color: rgb(255, 0, 0);
+  animation: rgbBorder 3s linear infinite;
+}
+
+@keyframes rgbBorder {
+  0% {
+    border-color: rgb(255, 0, 0);
+  }
+  33% {
+    border-color: rgb(0, 255, 0);
+  }
+  66% {
+    border-color: rgb(0, 0, 255);
+  }
+  100% {
+    border-color: rgb(255, 0, 0);
+  }
 }
 
 .chroma-img-wrapper {
