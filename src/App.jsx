@@ -22,6 +22,18 @@ function App() {
   const [webglSupported, setWebglSupported] = useState(true);
   const [selectedCertificate, setSelectedCertificate] = useState(null);
 
+  const handleContactClick = () => {
+    const phoneNumber = "6285835815530";
+    const message = encodeURIComponent(
+      "Halo Andri, saya tertarik untuk berdiskusi lebih lanjut."
+    );
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${message}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
   useEffect(() => {
 
     setWebglSupported(hasWebGLSupport());
@@ -138,12 +150,12 @@ function App() {
               title="Data Analyst"
               handle="andrichris"
               status="Online"
-              contactText="Contact Me"
+              contactText="Chat WhatsApp"
               avatarUrl={`${baseUrl}assets/faris.png`}
               showUserInfo={true}
               enableTilt={true}
               enableMobileTilt={false}
-              onContactClick={() => console.log('Contact clicked')}
+              onContactClick={handleContactClick}
             />
           </div>
         </div>
