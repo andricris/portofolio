@@ -73,10 +73,11 @@ const ContactForm = () => {
           Verifikasi anti-spam: {captchaChallenge.first} + {captchaChallenge.second} =
           <div className="flex flex-wrap items-center gap-2">
             <input
-              type="text"
+              type="number"
               name="captcha"
               inputMode="numeric"
-              pattern="\\d*"
+              min="0"
+              step="1"
               value={captchaAnswer}
               onChange={(event) => {
                 setCaptchaAnswer(event.target.value);
