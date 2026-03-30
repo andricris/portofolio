@@ -255,7 +255,7 @@ export const listProyek = [
   },
   {
     id: 18,
-    image: "https://cdn-icons-png.flaticon.com/512/303/303812.png",
+    image: "https://cdn-icons-png.flaticon.com/512/10977/10977670.png",
     title: "Excel Line Converter",
     subtitle: "Baris Excel → satu baris",
     fullDescription: "Tools konversi baris Excel menjadi satu baris",
@@ -266,19 +266,5 @@ export const listProyek = [
     stack: projectStack,
     repoLabel: "Private repo",
     dad: "1800",
-  },
-  {
-    id: 20,
-    image: "https://cdn-icons-png.flaticon.com/512/5632/5632472.png",
-    title: "Kalkulator menghitung ED produk",
-    subtitle: "Menghitung sisa umur produk",
-    fullDescription: "Tools untuk menghitung sisa umur produk",
-    borderColor: "#10B981",
-    gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://kalkuede.netlify.app/",
-    screenshot: projectScreenshot,
-    stack: projectStack,
-    repoLabel: "Private repo",
-    dad: "2000",
   },
 ];
