@@ -281,4 +281,18 @@ export const listProyek = [
     repoLabel: "Private repo",
     dad: "1800",
   },
+  {
+    id: 20,
+    image: "https://cdn-icons-png.flaticon.com/512/3209/3209265.png",
+    title: "Table to Email",
+    subtitle: "Konversi tabel HTML ke format email",
+    fullDescription: "Tools untuk konversi tabel HTML ke format email",
+    borderColor: "#10B981",
+    gradient: "linear-gradient(180deg, #10B981, #000)",
+    url: "https://tabletoemail.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
+    dad: "2000",
+  },
 ];
