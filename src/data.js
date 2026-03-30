@@ -269,7 +269,7 @@ export const listProyek = [
   },
   {
     id: 20,
-    image: "https://cdn-icons-png.flaticon.com/512/2838/2838912.png",
+    image: "https://cdn-icons-png.flaticon.com/512/5632/5632472.png",
     title: "Kalkulator menghitung ED produk",
     subtitle: "Menghitung sisa umur produk",
     fullDescription: "Tools untuk menghitung sisa umur produk",
