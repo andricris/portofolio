@@ -295,4 +295,18 @@ export const listProyek = [
     repoLabel: "Private repo",
     dad: "2000",
   },
+  {
+    id: 22,
+    image: "https://cdn-icons-png.flaticon.com/512/18776/18776046.png",
+    title: "Excel Multi Column Pivot",
+    subtitle: "Pivot multi-kolom dinamis",
+    fullDescription: "Tools untuk Pivot multi-kolom dinamis",
+    borderColor: "#10B981",
+    gradient: "linear-gradient(180deg, #10B981, #000)",
+    url: "https://excel-multi-column-pivot.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
+    dad: "2200",
+  },
 ];
