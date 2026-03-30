@@ -198,6 +198,20 @@ export const listTools = [
 
 export const listProyek = [
   {
+    id: 1,
+    image: "https://cdn-icons-png.flaticon.com/512/5632/5632472.png",
+    title: "Kalkulator menghitung ED produk",
+    subtitle: "Menghitung sisa umur produk",
+    fullDescription: "Tools untuk menghitung sisa umur produk",
+    borderColor: "#10B981",
+    gradient: "linear-gradient(180deg, #10B981, #000)",
+    url: "https://kalkuede.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
+    dad: "150",
+  },
+  {
     id: 2,
     image: "https://cdn-icons-png.flaticon.com/512/745/745752.png",
     title: "SteamBox",
