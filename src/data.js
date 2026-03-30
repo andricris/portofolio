@@ -253,4 +253,18 @@ export const listProyek = [
     repoLabel: "Private repo",
     dad: "1600",
   },
+  {
+    id: 18,
+    image: "https://cdn-icons-png.flaticon.com/512/6134/6134346.png",
+    title: "Excel Line Converter",
+    subtitle: "Baris Excel → satu baris",
+    fullDescription: "Tools konversi baris Excel menjadi satu baris",
+    borderColor: "#10B981",
+    gradient: "linear-gradient(180deg, #10B981, #000)",
+    url: "https://line2baru.netlify.app/",
+    screenshot: projectScreenshot,
+    stack: projectStack,
+    repoLabel: "Private repo",
+    dad: "1800",
+  },
 ];
