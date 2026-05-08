@@ -113,9 +113,31 @@
   column-gap: 0.75rem;
 }
 
+.chroma-badge {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(139, 92, 246, 0.45);
+  background: rgba(139, 92, 246, 0.12);
+  color: #c4b5fd;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .chroma-info .role,
 .chroma-info .handle {
   color: rgba(226, 232, 240, 0.7);
+}
+
+.chroma-description {
+  color: rgba(226, 232, 240, 0.75);
+  font-size: 0.85rem;
+  line-height: 1.6;
 }
 
 .chroma-button {
